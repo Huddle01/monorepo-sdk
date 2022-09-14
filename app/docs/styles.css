@@ -1,0 +1,60 @@
+@tailwind utilities;
+
+/* Override the Tailwind preflight */
+button[type='submit'] {
+  @apply bg-black;
+}
+
+body {
+  background: #202020;
+
+}
+
+.dark body {
+  background: #202020
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.wrapper {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  animation: slidein 60s linear infinite;
+  filter: grayscale(100%);
+}
+
+.mesh {
+  background: url(./public/images/Background.png);
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.gridBack {
+  background: url(./public/images/Union.png);
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
+}
+
+.trigger[data-state="active"] {
+  @apply text-sm font-medium bg-custom-2
+}
+
+
+.trigger2[data-state="active"] {
+  @apply text-base font-medium text-blue-500 bg-[#60A5FA33]
+}
+
+.content[data-state="inactive"] {
+  @apply hidden
+}
+
