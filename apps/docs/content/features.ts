@@ -2,7 +2,7 @@ import React, { ComponentProps } from "react";
 
 export type Feature = {
   name: string;
-  description: React.ReactNode;
+  description: string;
   page: "all" | "home" | "docs";
 };
 

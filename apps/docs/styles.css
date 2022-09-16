@@ -46,7 +46,7 @@ body {
 }
 
 .trigger[data-state="active"] {
-  @apply text-sm font-medium bg-custom-2
+  @apply text-sm font-medium bg-webRgbColors-6
 }
 
 

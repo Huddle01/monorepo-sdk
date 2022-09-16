@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, ReactNode } from "react";
 import VercelLogo from "./logos/Vercel";
 
-function FooterLink({ href, children }: { href: string; children: ReactNode }) {
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
   const classes =
     "text-sm text-gray-500 no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition";
   if (href.startsWith("http")) {
@@ -20,7 +20,7 @@ function FooterLink({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-function FooterHeader({ children }: { children: ReactNode }) {
+function FooterHeader({ children }: { children: React.ReactNode }) {
   return <h3 className="text-sm text-gray-900 dark:text-white">{children}</h3>;
 }
 

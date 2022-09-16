@@ -11,7 +11,7 @@ const DetailedFeatureInner = (props: { feature: FeatureProps["feature"] }) => {
   const { name, description } = props.feature;
   return (
     <div className="flex flex-col  gap-4 justify-center rounded-xl items-center">
-      <div className=" bg-custom-2 rounded-xl text-center py-24 w-full">
+      <div className=" bg-webRgbColors-6 rounded-xl text-center py-24 w-full">
         GIF or Image
       </div>
       <div className="inline-flex items-center space-x-3">
@@ -27,7 +27,7 @@ const DetailedFeatureInner = (props: { feature: FeatureProps["feature"] }) => {
   );
 };
 
-const featureWrapperClasses = `block bg-custom-5 py-6 px-4 border border-slate-700 shadow-lg rounded-xl`;
+const featureWrapperClasses = `block bg-custom-2 py-6 px-4 border border-slate-700 shadow-lg rounded-xl`;
 
 export const DetailedFeatureLink = (props: {
   href: string;

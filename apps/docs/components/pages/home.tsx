@@ -15,12 +15,16 @@ import { HomeFeatures } from "../Features";
 import { Marquee } from "../clients/Marquee";
 import { Clients } from "../clients/Clients";
 import * as Tabs from "@radix-ui/react-tabs";
+import HomepageIconsMob from "../assets/HomepageIconsMob";
+
+import { useWindowSize } from 'usehooks-ts'
 
 export default function Home() {
   const onClick = () => {
     copy("npx create-turbo@latest");
     toast.success("Copied to clipboard");
   };
+
 
   return (
     <>
@@ -65,16 +69,16 @@ export default function Home() {
           </div>
           <div className="text-blue-300 font-medium">SDK out in alpha use</div>
         </div>
-        <div className="max-w-5xl text-center mx-auto text-4xl md:text-5xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
+        <div className="max-w-5xl text-center mx-auto mob:text-4xl laptop:text-5xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
           Build Powerful Audio/Video&nbsp;
-          <br className="hidden lg:block" />
+          <br className="mob:hidden tablet:block" />
           <span className="inline-block ">Apps in Minutes</span>{" "}
         </div>
         <p className="max-w-sm mx-auto mt-6 text-sm font-medium leading-tight text-center text-gray-400 ">
           We have done the heavy lifting so you can focus on building the best
           live audio & video experiences within few lines of code.
         </p>
-        <div className="w-full mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
+        <div className="w-full mx-auto mob:mt-5 tablet:mt-12 sm:flex sm:justify-center ">
           <div className="rounded-md ">
             <Link href="/docs">
               <a className="flex items-center justify-center gap-2 w-full px-8 py-3 text-base font-medium text-white no-underline bg-brand border border-transparent rounded-xl dark:bg-brand dark:text-white md:py-3 md:text-lg md:px-10 md:leading-6">
@@ -93,6 +97,50 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="grid grid-cols-6 place-content-center gap-4 hdReady:hidden">
+        <div className="flex flex-col items-center justify-start">
+          <div className=" h-8 tablet:h-10 ">
+            {HomepageIconsMob.UD}
+          </div>
+        </div>
+        <div className="flex flex-col  items-center justify-center">
+          <div className="h-8 tablet:h-10">
+            {HomepageIconsMob.solana}
+          </div>
+        </div>
+        <div className="flex flex-col gap-7 items-center justify-between">
+          <div className=" h-8 tablet:h-10 ">
+            {HomepageIconsMob.metamask}
+          </div>
+          <div className=" h-8 tablet:h-10 ">
+            {HomepageIconsMob.phantom}
+          </div>
+        </div>
+        <div className="flex flex-col gap-7  items-center justify-between">
+          <div className=" h-8 tablet:h-10 ">
+            {HomepageIconsMob.nft}
+          </div>
+          <div className=" h-8 tablet:h-10">
+            {HomepageIconsMob.ens}
+          </div>
+        </div>
+        <div className="flex flex-col  items-center justify-center">
+          <div className=" h-8 tablet:h-10 ">
+            {HomepageIconsMob.ethereum}
+          </div>
+        </div>
+        <div className="flex flex-col  items-center justify-start">
+          <div className=" h-8 tablet:h-10 ">
+            {HomepageIconsMob.polygon}
+          </div>
+        </div>
+      </div>
+
+      <div className=" mt-20">
+        <img src="/images/landingWeb.png" />
+      </div>
+    
 
       <div className="py-16">
         <div className="mx-auto ">
@@ -128,45 +176,45 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="py-12 w-full px-8 rounded-2xl bg-custom-5 border border-slate-700 ">
+          <div className="py-12 w-full px-8 rounded-2xl bg-custom-2 border border-slate-700 ">
             <Tabs.Root
               className="flex flex-col gap-3 md:gap-4 md:flex-row  w-full"
               defaultValue="f1"
             >
               <Tabs.List className="flex md:flex-col gap-4 md:w-1/3 ">
                 <Tabs.Trigger
-                  className="bg-custom-5 text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 text-sm trigger text-left p-3 rounded-lg"
                   value="f1"
                 >
                   Feature 1
                 </Tabs.Trigger>
                 <Tabs.Trigger
-                  className="bg-custom-5 text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 text-sm trigger text-left p-3 rounded-lg"
                   value="f2"
                 >
                   Feature 2
                 </Tabs.Trigger>
                 <Tabs.Trigger
-                  className="bg-custom-5 text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 text-sm trigger text-left p-3 rounded-lg"
                   value="f3"
                 >
                   Feature 3
                 </Tabs.Trigger>
               </Tabs.List>
               <Tabs.Content
-                className="bg-custom-2 content rounded-lg h-80 w-full flex justify-center items-center"
+                className="bg-webRgbColors-6 content rounded-lg h-80 w-full flex justify-center items-center"
                 value="f1"
               >
                 Content 1
               </Tabs.Content>
               <Tabs.Content
-                className="bg-custom-2 content rounded-lg h-80 w-full flex justify-center items-center"
+                className="bg-webRgbColors-6 content rounded-lg h-80 w-full flex justify-center items-center"
                 value="f2"
               >
                 Content 2
               </Tabs.Content>
               <Tabs.Content
-                className="bg-custom-2 content rounded-lg h-80 w-full flex justify-center items-center"
+                className="bg-webRgbColors-6 content rounded-lg h-80 w-full flex justify-center items-center"
                 value="f3"
               >
                 Content 3
@@ -187,10 +235,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 place-items-center px-4">
-            <div className=" h-64 w-80 lg:w-[560px] lg:h-80 border border-slate-700 bg-custom-5 rounded-2xl flex justify-center items-center lg:place-self-end ">
+            <div className=" h-64 w-80 lg:w-[560px] lg:h-80 border border-slate-700 bg-custom-2 rounded-2xl flex justify-center items-center lg:place-self-end ">
               GIF
             </div>
-            <div className=" h-64 w-80 lg:w-[560px] lg:h-80 bg-custom-5 rounded-2xl border border-slate-700 flex justify-center items-center lg:place-self-start ">
+            <div className=" h-64 w-80 lg:w-[560px] lg:h-80 bg-custom-2 rounded-2xl border border-slate-700 flex justify-center items-center lg:place-self-start ">
               GIF
             </div>
           </div>
@@ -322,22 +370,22 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 place-content-center gap-4 px-4 w-full md:mt-52 md:w-2/3">
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 md:pb-24 pb-14 rounded-xl bg-custom-5 md:col-span-3 ">
+            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 md:pb-24 pb-14 rounded-xl bg-custom-2 md:col-span-3 ">
               <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#98FFc1]   to-[#3BE191] ">
                 Start Buidling
               </a>
             </button>
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-5 md:row-span-1 md:col-span-2 ">
+            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-2 md:row-span-1 md:col-span-2 ">
               <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF]   to-[#3BB4E1] ">
                 Pricing
               </a>
             </button>
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-5 md:col-start-1 md:col-span-2 ">
+            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-2 md:col-start-1 md:col-span-2 ">
               <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF]   to-[#E7A1FF] ">
                 About Us
               </a>
             </button>
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-5 md:col-span-3 ">
+            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-2 md:col-span-3 ">
               <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB] ">
                 Try Huddle01
               </a>
@@ -345,178 +393,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div className="sm:py-20 lg:py-24">
-        <div className="max-w-4xl px-4 pb-12 mx-auto lg:px-8 ">
-          <h2 className="text-4xl font-extrabold leading-tight tracking-tight lg:text-5xl xl:text-6xl md:text-center dark:text-white">
-            Loved by badass engineers
-          </h2>
-        </div>
-        <div className="grid gap-4 px-4 mx-auto lg:grid-cols-3 max-w-7xl">
-          <div className="space-y-4">
-            <Tweet
-              url="https://twitter.com/jongold/status/1409714159227326466"
-              username="jongold"
-              name="Jon Gold"
-              date="Jun 28"
-              avatar={jongold}
-            >
-              <Mention>@turborepo</Mention> is the coolest javascript thing
-              i&apos;ve seen probably since an early prototype of Next.js
-              <br />
-              <br />
-              javascript fatigue is over
-            </Tweet>
-            <Tweet
-              url="https://twitter.com/flavioukk/status/1405526268615958530"
-              username="flavioukk"
-              name="Flávio Carvalho"
-              date="Jun 17"
-              avatar={flavio}
-            >
-              <Mention>@turborepo</Mention> cache hit in CI is the most
-              satisfying thing ever, why hasn&apos;t anyone thought of this
-              before lol
-            </Tweet>
-            <Tweet
-              url="https://twitter.com/shadcn/status/1470269932789125123"
-              username="yangshunz"
-              name="Yangshun Tay"
-              date="Dec 12"
-              avatar={yangshunz}
-            >
-              Experimented with <Mention>@turborepo</Mention> on my Flow-based
-              4-package monorepo where each package contains lint, test and
-              build commands:
-              <br />
-              <br />
-              - lint, test, build all files in series: ~75s
-              <br />
-              - lerna --parallel: ~62s
-              <br />
-              - turbo: ~35s (791ms on cache hit)
-              <br />
-              <br />
-              🤯 Impressive results! FULL TURBO!
-            </Tweet>
-          </div>
-
-          <div className="space-y-4">
-            <Tweet
-              url="https://twitter.com/paularmstrong/status/1386796930479665158"
-              username="paularmstrong"
-              name="Paul Armstrong"
-              date="Apr 26"
-              avatar={paularmstrong}
-            >
-              Just saw <Mention>@turborepo</Mention> in action and gotta say: it
-              looks amazing!
-            </Tweet>
-
-            <Tweet
-              url="https://twitter.com/edelman215/status/1410388867828654084"
-              username="edelman215"
-              name="Michael Edelman"
-              date="Jun 30"
-              avatar={edelman}
-            >
-              10 runtime-diverse apps, 7 IAC stacks, 6 custom JSII CDK
-              constructs, 5 third-party client wrappers, 2 auto-generated
-              internal api sdks, a handful of utility/misc packages under
-              management, &amp; growing, in 1 monorepo--all in a day&apos;s work
-              for <Mention>@turborepo</Mention>
-              --no pain, all gain. 😻
-            </Tweet>
-            <Tweet
-              url="https://twitter.com/shadcn/status/1470269932789125123"
-              username="shadcn"
-              name="shadcn"
-              date="Dec 12"
-              avatar={shadcn}
-            >
-              Turborepo is really good at what it does: Ridiculously fast
-              builds.
-            </Tweet>
-            <Tweet
-              url="https://twitter.com/n_moore/status/1469344866194788355"
-              username="n_moore"
-              name="Nate Moore"
-              date="Dec 10"
-              avatar={nmoore}
-            >
-              Finally! <Mention>@astrodotbuild</Mention> is now using
-              <Mention>@turborepo</Mention>. ♥️⚡️
-              <br />
-              So glad it&apos;s open source now—congrats to{" "}
-              <Mention>@jaredpalmer</Mention> and <Mention>@vercel</Mention> on
-              the release!
-            </Tweet>
-          </div>
-          <div className="space-y-4">
-            <Tweet
-              url="https://twitter.com/ollermi/status/1377458483671543810"
-              username="ollermi"
-              name="Miguel Oller"
-              date="Mar 31"
-              avatar={ollermi}
-            >
-              It&apos;s been a joy to use <Mention>@turborepo</Mention>.{" "}
-              <Mention>@jaredpalmer</Mention> is building something truly
-              wonderful for the JS community
-            </Tweet>
-            <Tweet
-              url="https://twitter.com/elado/status/1377405777506279425"
-              username="elado"
-              name="Elad Ossadon"
-              date="Mar 31"
-              avatar={elad}
-            >
-              If you build for web, leave everything and go see what{" "}
-              <Mention>@jaredpalmer</Mention> is doing with{" "}
-              <Mention>@turborepo</Mention>. One of the most exciting pieces of
-              tech lately! The hype is real
-            </Tweet>
-
-            <Tweet
-              url="https://twitter.com/christianjuth/status/1469494057843847169"
-              username="christianjuth"
-              name="Christian 👨🏼‍💻"
-              date="Dec 10"
-              avatar={christian}
-            >
-              Holy wow, I just rewrote my entire Lerna monorepo to use Turborepo
-              and SWC, and it took me like maybe 20 minutes. This is insane.
-              Literally, everything Vercel has backed/acquired/created makes
-              development a little easier. But wow, it just blew my mind how
-              easy this all is to use.
-            </Tweet>
-            <Tweet
-              url="https://twitter.com/jplhomer/status/1494080248845062154"
-              username="jplhomer"
-              name="Josh Larson"
-              date="Feb 16"
-              avatar={joshlarson}
-            >
-              <>
-                Living that <Mention>@turborepo</Mention> life{" "}
-                <span role="img" aria-label="Smiling face with sunglasses">
-                  😎
-                </span>
-              </>
-            </Tweet>
-          </div>
-        </div>
-        <Container>
-          <div className="px-4 py-16 mx-auto mt-10 sm:max-w-none sm:flex sm:justify-center">
-            <div className="space-y-4 sm:space-y-0 sm:mx-auto ">
-              <Link href="/docs/getting-started">
-                <a className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white no-underline bg-black border border-transparent rounded-md dark:bg-white dark:text-black betterhover:dark:hover:bg-gray-300 betterhover:hover:bg-gray-700 md:py-3 md:text-lg md:px-10 md:leading-6">
-                  Start Building →
-                </a>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </div> */}
       <Toaster position="bottom-right" />
     </>
   );

@@ -18,10 +18,9 @@ module.exports = {
           blue: '#246BFD',
           black: '#121214',
           navy: '#181A20',
-          1: '#1C1E24',
-          2: '#334155',
-          4: '#1C1E24',
-          5: '#23262F',
+          1: '#121214',
+          2: '#181A20',
+          3: '#1C1E24',
         },
         webRgbColors: {
           1: 'rgba(24, 24, 27, 0.8)',
@@ -53,6 +52,14 @@ module.exports = {
             transform: 'scaleX(0)',
           },
         },
+      },
+      screens: {
+        mob: "390px",
+        tablet: "768px",
+        laptop: "1024px",
+        hdReady: "1280px",
+        hdPlus: "1600px",
+        fullHd: "1920px",
       },
       transitionTimingFunction: {
         loading: 'cubic-bezier(0.65, 0, 0.35, 1)',
