@@ -70,7 +70,7 @@ export default function Home() {
           <br className="hidden lg:block" />
           <span className="inline-block ">Apps in Minutes</span>{" "}
         </div>
-        <p className="max-w-sm mx-auto mt-6 text-sm font-medium leading-tight text-center text-gray-400 ">
+        <p className="max-w-lg mx-auto mt-6 hdReady:text-base mob:text-sm font-medium leading-tight text-center text-gray-400 ">
           We have done the heavy lifting so you can focus on building the best
           live audio & video experiences within few lines of code.
         </p>
@@ -96,7 +96,7 @@ export default function Home() {
 
       <div className="py-16">
         <div className="mx-auto ">
-          <p className="pb-8 text-sm font-medium tracking-wide text-center">
+          <p className="pb-8 mob:text-sm hdReady:text-xl font-medium tracking-wide text-center">
             Trusted by DAOs, Communities and Builders
           </p>
           <Marquee>
@@ -107,10 +107,10 @@ export default function Home() {
 
       <div className="relative mesh">
         <div className="px-4 py-16 mx-auto sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24">
-          <h2 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF] via-white  to-[#E7A1FF] font-extrabold tracking-tight lg:text-5xl xl:text-6xl text-center">
+          <h2 className="mob:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF] via-white  to-[#E7A1FF] font-extrabold tracking-tight hdReady:text-4xl text-center">
             Heading
           </h2>
-          <p className="mx-auto mt-4 text-sm font-normal text-slate-400 lg:max-w-3xl lg:text-xl text-center">
+          <p className="mx-auto mt-4 font-normal text-slate-400 lg:max-w-3xl hdReady:text-base mob:text-sm text-center">
             Subtext
           </p>
           <HomeFeatures />
@@ -118,11 +118,11 @@ export default function Home() {
       </div>
       <div className="gridBack flex flex-col items-center justify-center mx-auto gap-32 px-5">
         <div className="flex flex-col justify-center items-center gap-12 ">
-          <div className="flex flex-col gap-2 px-4">
-            <h1 className="text-center text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF] to-[#3BB4E1] ">
+          <div className="flex flex-col gap-2 px-4 ">
+            <h1 className="text-center mob:text-3xl hdReady:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF] to-[#3BB4E1] ">
               Right Out of the Box
             </h1>
-            <p className=" text-sm font-normal text-slate-400 text-center">
+            <p className="mob:text-sm hdReady:text-base  font-normal text-slate-400 text-center ">
               Get essential Audio/Video features to build powerful communication
               apps plus Web3 Features
             </p>
@@ -175,10 +175,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-12 mb-10  md:mb-32">
+        <div className="flex flex-col items-center justify-center gap-12 mb-10  md:mb-32 ">
           <div className="flex flex-col gap-2 px-4">
-            <h1 className="text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB]">
-              Integrate/Build <br /> Blazingly Fast
+            <h1 className="mob:text-3xl hdReady:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB]">
+              Integrate/Build Blazingly Fast
             </h1>
             <p className="text-center text-sm font-normal text-slate-400">
               Designed for the Developers, By the Developers. To empower them
@@ -215,7 +215,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2 text-center px-4">
+            <div className="flex flex-col gap-2  text-center px-4">
               <div className="flex justify-between">
                 <Image
                   src="/images/CloudL.png"
@@ -223,7 +223,7 @@ export default function Home() {
                   width={90}
                   height={60}
                 />
-                <h1 className=" text-3xl font-extrabold self-end text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
+                <h1 className="mob:text-3xl hdReady:text-4xl font-extrabold self-end text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
                   Tailored for your Needs
                 </h1>
                 <Image
@@ -323,7 +323,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 place-content-center gap-4 px-4 w-full md:mt-52 md:w-2/3">
             <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 md:pb-24 pb-14 rounded-xl bg-custom-5 md:col-span-3 ">
-              <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#98FFc1]   to-[#3BE191] ">
+              <a className="text-[2.5rem] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#98FFc1]   to-[#3BE191] ">
                 Start Buidling
               </a>
             </button>
