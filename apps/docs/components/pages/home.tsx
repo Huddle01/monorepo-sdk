@@ -65,7 +65,7 @@ export default function Home() {
           </div>
           <div className="text-blue-300 font-medium">SDK out in alpha use</div>
         </div>
-        <div className="max-w-5xl text-center mx-auto  mob:text-4xl hdReady:text-5xl fullHd:hidden font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
+        <div className="max-w-5xl text-center mx-auto  mob:text-4xl hdReady:text-5xl  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
           Build Powerful Audio/Video&nbsp;
           <br className="hidden lg:block" />
           <span className="inline-block ">Apps in Minutes</span>{" "}
