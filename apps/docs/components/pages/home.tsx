@@ -17,7 +17,8 @@ import { Clients } from "../clients/Clients";
 import * as Tabs from "@radix-ui/react-tabs";
 import HomepageIconsMob from "../assets/HomepageIconsMob";
 
-import { useWindowSize } from 'usehooks-ts'
+import { useWindowSize } from "usehooks-ts";
+import { Footer } from "../Footer";
 
 export default function Home() {
   const onClick = () => {
@@ -25,9 +26,8 @@ export default function Home() {
     toast.success("Copied to clipboard");
   };
 
-  const { width } = useWindowSize()
-  const isMob = width < 425
-
+  const { width } = useWindowSize();
+  const isMob = width < 425;
 
   return (
     <>
@@ -135,7 +135,6 @@ export default function Home() {
       <div className=" hdReady:mt-20 mob:mt-10">
         <img src="/images/landingWeb.png" />
       </div>
-
 
       <div className="py-16">
         <div className="mx-auto ">
@@ -266,31 +265,8 @@ export default function Home() {
                   width={isMob ? 90 : 175}
                   height={isMob ? 90 : 120}
                 />
-                {
-                  !isMob ? (
-                    <div className="flex flex-col gap-4">
-                      <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
-                        Tailored for your Needs
-                      </h1>
-                      <p className="px-3 text-center text-sm font-normal ">
-                        Sky is the limit when you build via Huddle01 SDK. Build
-                        according to your usecase, or go beyond and ship something
-                        crazy!
-                      </p>
-                    </div>
-                  ) : ''
-                }
-
-                <Image
-                  src="/images/cloudR.png"
-                  className=""
-                  width={isMob ? 90 : 175}
-                  height={isMob ? 90 : 120}
-                />
-              </div>
-              {
-                isMob ? (
-                  <>
+                {!isMob ? (
+                  <div className="flex flex-col gap-4">
                     <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
                       Tailored for your Needs
                     </h1>
@@ -299,11 +275,32 @@ export default function Home() {
                       according to your usecase, or go beyond and ship something
                       crazy!
                     </p>
-                  </>
-                ) : ''
-              }
+                  </div>
+                ) : (
+                  ""
+                )}
 
-
+                <Image
+                  src="/images/cloudR.png"
+                  className=""
+                  width={isMob ? 90 : 175}
+                  height={isMob ? 90 : 120}
+                />
+              </div>
+              {isMob ? (
+                <>
+                  <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
+                    Tailored for your Needs
+                  </h1>
+                  <p className="px-3 text-center text-sm font-normal ">
+                    Sky is the limit when you build via Huddle01 SDK. Build
+                    according to your usecase, or go beyond and ship something
+                    crazy!
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className="mx-4">
@@ -413,6 +410,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* <Footer /> */}
       <Toaster position="bottom-right" />
     </>
   );

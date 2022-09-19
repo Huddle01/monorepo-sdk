@@ -8,8 +8,7 @@ const theme = {
   project: {
     link: "https://github.com/Huddle-01/huddle01-docs",
   },
-  docsRepositoryBase:
-    "https://github.com/Huddle-01/huddle01-docs/",
+  docsRepositoryBase: "https://github.com/Huddle-01/huddle01-docs/",
   titleSuffix: " | Huddle01",
   unstable_flexsearch: true,
   unstable_staticImage: true,
@@ -91,11 +90,7 @@ const theme = {
   editLink: {
     text: "Edit this page on GitHub",
   },
-  footer: {
-    text: () => {
-      return <Footer />;
-    },
-  },
+  footer: { component: <Footer /> },
   nextThemes: {
     defaultTheme: "dark",
   },

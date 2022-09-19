@@ -1,17 +1,16 @@
 @tailwind utilities;
 
 /* Override the Tailwind preflight */
-button[type='submit'] {
+button[type="submit"] {
   @apply bg-black;
 }
 
 body {
   background: #202020;
-
 }
 
 .dark body {
-  background: #202020
+  background: #202020;
 }
 
 @keyframes slidein {
@@ -46,15 +45,13 @@ body {
 }
 
 .trigger[data-state="active"] {
-  @apply text-sm font-medium bg-webRgbColors-6
+  @apply text-sm font-medium bg-webRgbColors-6;
 }
 
-
 .trigger2[data-state="active"] {
-  @apply text-base font-medium border-brand border-b-2
+  @apply text-base font-medium border-brand border-b-2;
 }
 
 .content[data-state="inactive"] {
-  @apply hidden
+  @apply hidden;
 }
-
