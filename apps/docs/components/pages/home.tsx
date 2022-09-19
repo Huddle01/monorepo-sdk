@@ -28,6 +28,7 @@ export default function Home() {
 
   const { width } = useWindowSize();
   const isMob = width < 425;
+  const isTab = width < 768;
 
   return (
     <>
@@ -35,8 +36,7 @@ export default function Home() {
         <title>Huddle01</title>
         <meta
           name="og:description"
-          content="Turborepo is a high-performance build system for JavaScript and
-          TypeScript codebases"
+          content="We have done the heavy lifting so you can focus on building the best live audio & video experiences within few lines of code. "
         />
       </Head>
       <div className="hidden xl:block">
@@ -72,12 +72,10 @@ export default function Home() {
           </div>
           <div className="text-blue-300 font-medium">SDK out in alpha use</div>
         </div>
-        <div className=" laptop:max-w-5xl text-center mx-auto mob:text-4xl laptop:text-5xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
-          Build Powerful Audio/&nbsp;
-          <br className="tablet:hidden" />
-          Video <br className="mob:hidden tablet:block" /> Apps in Minutes
+        <div className=" hdReady:max-w-2xl tablet:max-w-xl max-w-sm text-center mx-auto mob:text-4xl laptop:text-5xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
+          Build Powerful Audio/Video Apps in Minutes
         </div>
-        <p className="max-w-sm mx-auto mt-6 text-sm font-medium leading-tight text-center text-gray-400 ">
+        <p className="max-w-sm tablet:max-w-lg mx-auto mt-6 text-sm font-medium leading-tight text-center text-gray-400 ">
           We have done the heavy lifting so you can focus on building the best
           live audio & video experiences within few lines of code.
         </p>
@@ -148,7 +146,7 @@ export default function Home() {
       </div>
 
       <div className="relative gridBack">
-        <div className="px-4 py-16 mx-auto sm:pt-20 sm:pb-24 lg:max-w-7xl w-full lg:pt-24">
+        <div className="px-4 py-16 mx-auto flex flex-col justify-center items-center sm:pt-20 sm:pb-24 lg:max-w-7xl w-full lg:pt-24">
           <h2 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF]   to-[#E7A1FF] font-extrabold tracking-tight lg:text-5xl xl:text-6xl text-center">
             Heading
           </h2>
@@ -158,8 +156,8 @@ export default function Home() {
           <HomeFeatures />
         </div>
       </div>
-      <div className="gridBack flex flex-col items-center justify-center mx-auto gap-32 px-5">
-        <div className="flex flex-col justify-center items-center gap-12 ">
+      <div className="gridBack flex flex-col items-center justify-center mx-auto gap-32">
+        <div className="blobBack flex flex-col justify-center items-center gap-12 p-4">
           <div className="flex flex-col gap-2 px-4">
             <h1 className="text-center text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF] to-[#3BB4E1] ">
               Right Out of the Box
@@ -177,19 +175,19 @@ export default function Home() {
             >
               <Tabs.List className="flex md:flex-col gap-4 md:w-1/3 ">
                 <Tabs.Trigger
-                  className="bg-custom-2 text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 w-full truncate text-sm trigger text-left p-3 rounded-lg"
                   value="f1"
                 >
                   Feature 1
                 </Tabs.Trigger>
                 <Tabs.Trigger
-                  className="bg-custom-2 text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 truncate text-sm trigger text-left p-3 rounded-lg"
                   value="f2"
                 >
                   Feature 2
                 </Tabs.Trigger>
                 <Tabs.Trigger
-                  className="bg-custom-2 text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 truncate text-sm trigger text-left p-3 rounded-lg"
                   value="f3"
                 >
                   Feature 3
@@ -218,9 +216,9 @@ export default function Home() {
         </div>
 
         <div className="max-w-full flex flex-col items-center justify-center gap-12 mb-10  md:mb-32">
-          <div className="flex flex-col justify-center items-center gap-2 px-4">
-            <h1 className="text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB]">
-              Integrate/Build <br /> Blazingly Fast
+          <div className="max-w-full flex flex-col justify-center items-center gap-2 px-4">
+            <h1 className="max-w-sm laptop:max-w-full text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB]">
+              Integrate/Build Blazingly Fast
             </h1>
             <p className=" text-center text-sm font-normal text-slate-400">
               Designed for the Developers, By the Developers. To empower them
@@ -256,21 +254,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 mt-12">
             <div className="flex flex-col gap-2 text-center px-4">
               <div className="flex items-center justify-between">
                 <Image
                   src="/images/CloudL.png"
                   className=""
-                  width={isMob ? 90 : 175}
-                  height={isMob ? 90 : 120}
+                  width={isTab ? 90 : 175}
+                  height={isTab ? 90 : 120}
                 />
-                {!isMob ? (
+                {!isTab ? (
                   <div className="flex flex-col gap-4">
                     <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
                       Tailored for your Needs
                     </h1>
-                    <p className="px-3 text-center text-sm font-normal ">
+                    <p className="px-3 text-slate-400 text-center text-sm font-normal ">
                       Sky is the limit when you build via Huddle01 SDK. Build
                       according to your usecase, or go beyond and ship something
                       crazy!
@@ -283,16 +281,16 @@ export default function Home() {
                 <Image
                   src="/images/cloudR.png"
                   className=""
-                  width={isMob ? 90 : 175}
-                  height={isMob ? 90 : 120}
+                  width={isTab ? 90 : 175}
+                  height={isTab ? 90 : 120}
                 />
               </div>
-              {isMob ? (
+              {isTab ? (
                 <>
                   <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
                     Tailored for your Needs
                   </h1>
-                  <p className="px-3 text-center text-sm font-normal ">
+                  <p className="px-3 text-slate-400 text-center text-sm font-normal ">
                     Sky is the limit when you build via Huddle01 SDK. Build
                     according to your usecase, or go beyond and ship something
                     crazy!
@@ -303,14 +301,14 @@ export default function Home() {
               )}
             </div>
 
-            <div className="mx-4">
+            <div className="mx-4 md:mx-20">
               <Tabs.Root
                 className="flex flex-col gap-3 md:gap-4  w-full"
                 defaultValue="f1"
               >
-                <Tabs.List className="flex gap-6 md:w-full pb-1 border-b-[1px] justify-center border-slate-700 ">
+                <Tabs.List className="flex gap-6 md:w-full  border-b-[1px] justify-center border-slate-700 ">
                   <Tabs.Trigger
-                    className="bg-custom-5 text-base trigger2 text-left py-2 px-1"
+                    className="bg-custom-5 text-base trigger2 text-left h-full py-2 px-1"
                     value="f1"
                   >
                     Case
@@ -336,7 +334,7 @@ export default function Home() {
                     <div className="bg-custom-2 h-80 rounded-xl mob:w-full laptop:row-span-2 laptop:col-start-2 laptop:col-span-1" />
 
                     <h1 className=" text-2xl font-bold text-slate-400 mt-8 laptop:row-start-1 laptop:col-span-1 self-end">
-                      Heading 3
+                      Heading 1
                     </h1>
                     <p className="text-base text-justify tablet:text-left font-normal mt-2 text-slate-500 laptop:row-start-2 laptop:col-span-1">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -354,7 +352,7 @@ export default function Home() {
                     <div className="bg-custom-2 h-80 rounded-xl mob:w-full laptop:row-span-2 laptop:col-start-2 laptop:col-span-1" />
 
                     <h1 className=" text-2xl font-bold text-slate-400 mt-8 laptop:row-start-1 laptop:col-span-1 self-end">
-                      Heading 3
+                      Heading 2
                     </h1>
                     <p className="text-base text-justify tablet:text-left font-normal mt-2 text-slate-500 laptop:row-start-2 laptop:col-span-1">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -386,7 +384,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex mob:flex-col laptop:flex-row laptop:justify-evenly laptop:gap-8 gap-4 px-4 w-full md:mt-52 mt-24 mb-20 md:mb-32">
+          <div className=" max-w-full flex mob:flex-col laptop:flex-row laptop:justify-evenly laptop:gap-8 gap-4 mob:px-4 tablet:px-16 w-full md:mt-52 mt-24 mb-20 md:mb-32">
             <button className=" border border-slate-700  rounded-xl py-6 px-8 bg-custom-2 grow ">
               <a className=" text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#98FFc1]   to-[#3BE191] ">
                 Start Buidling

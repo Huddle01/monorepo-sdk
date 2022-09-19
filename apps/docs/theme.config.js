@@ -35,55 +35,21 @@ const theme = {
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/images/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/images/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/images/favicon/favicon-16x16.png"
-        />
-        <link
-          rel="mask-icon"
-          href="/images/favicon/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+        <link rel="shortcut icon" href="/images/favicon/favicon.svg" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@turborepo" />
-        <meta name="twitter:creator" content="@turborepo" />
+        <meta name="twitter:site" content="@huddle01com" />
+        <meta name="twitter:creator" content="@huddle01com" />
         <meta property="og:type" content="website" />
         <meta name="og:title" content={title} />
         <meta name="og:description" content={frontMatter.description} />
         <meta
           property="og:url"
-          content={`https://turborepo.org${router.asPath}`}
-        />
-        <meta
-          property="twitter:image"
-          content={`https://turborepo.org${
-            frontMatter.ogImage ?? "/og-image.png"
-          }`}
-        />
-        <meta
-          property="og:image"
-          content={`https://turborepo.org${
-            frontMatter.ogImage ?? "/og-image.png"
-          }`}
+          content={`https://doc.huddle01.com${router.asPath}`}
         />
         <meta property="og:locale" content="en_IE" />
-        <meta property="og:site_name" content="Turborepo" />
+        <meta property="og:site_name" content="Huddle01Docs" />
       </>
     );
   },

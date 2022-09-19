@@ -2,14 +2,13 @@
 import { TNavigationType, TSocialDataType } from "../../types/types";
 
 // Utils
-import ExternalLinks from "../../helpers/externalLinks";
 
 // Assets
 import FooterIcons from "../assets/FooterIcons";
+import externalLinks from '../../helpers/externalLinks'
 
 const { twitter, insta, linkedin, youTube } = FooterIcons;
 
-const { twitterLink, linkedinLink } = ExternalLinks;
 
 export const NavigationData: TNavigationType = {
   solutions: [
@@ -51,8 +50,8 @@ export const NavigationData: TNavigationType = {
 };
 
 export const SocialData: TSocialDataType[] = [
-  { id: 1, icon: twitter, link: twitterLink },
-  { id: 2, icon: insta, link: "" },
-  { id: 3, icon: linkedin, link: linkedinLink },
-  { id: 4, icon: youTube, link: "" },
+  { id: 1, icon: twitter, link: externalLinks.twitterLink },
+  { id: 2, icon: insta, link: externalLinks.instaLink },
+  { id: 3, icon: linkedin, link: externalLinks.linkedinLink },
+  { id: 4, icon: youTube, link: externalLinks.ytLink },
 ];

@@ -29,7 +29,7 @@ const DetailedFeatureInner = (props: { feature: FeatureProps["feature"] }) => {
   );
 };
 
-const featureWrapperClasses = `block bg-custom-2 py-6 px-4 border border-slate-700 shadow-lg rounded-xl`;
+const featureWrapperClasses = `block bg-custom-2 max-w-sm border border-slate-700 shadow-lg rounded-xl`;
 
 export const DetailedFeatureLink = (props: {
   href: string;
@@ -57,7 +57,7 @@ export default function Feature(props: FeatureProps) {
   }
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center">
       <div>
       </div>
       <div>

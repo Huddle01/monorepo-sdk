@@ -55,3 +55,22 @@ body {
 .content[data-state="inactive"] {
   @apply hidden;
 }
+
+
+.blobBack {
+  background-image: url(./public/images/blobMob.png);
+  background-size: contain;
+  background-position:bottom;
+  background-repeat: no-repeat;
+
+  /* background-color: red; */
+}
+
+@media (min-width: 768px) {
+  .blobBack {
+    background-image: url(./public/images/blobWeb.png);
+    background-size: contain;
+    background-position:bottom;
+    background-repeat: no-repeat;
+  }
+}
