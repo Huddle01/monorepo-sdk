@@ -51,7 +51,7 @@ body {
 
 
 .trigger2[data-state="active"] {
-  @apply text-base font-medium text-blue-500 bg-[#60A5FA33]
+  @apply text-base font-medium border-brand border-b-2
 }
 
 .content[data-state="inactive"] {

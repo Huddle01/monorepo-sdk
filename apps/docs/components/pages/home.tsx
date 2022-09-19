@@ -25,6 +25,9 @@ export default function Home() {
     toast.success("Copied to clipboard");
   };
 
+  const { width } = useWindowSize()
+  const isMob = width < 425
+
 
   return (
     <>
@@ -69,19 +72,19 @@ export default function Home() {
           </div>
           <div className="text-blue-300 font-medium">SDK out in alpha use</div>
         </div>
-        <div className="max-w-5xl text-center mx-auto mob:text-4xl laptop:text-5xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
-          Build Powerful Audio/Video&nbsp;
-          <br className="mob:hidden tablet:block" />
-          <span className="inline-block ">Apps in Minutes</span>{" "}
+        <div className=" laptop:max-w-5xl text-center mx-auto mob:text-4xl laptop:text-5xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-[#F7F6FF] via-[#9A8BFF,#5EC3FC]  to-[#F7F6FF] ">
+          Build Powerful Audio/&nbsp;
+          <br className="tablet:hidden" />
+          Video <br className="mob:hidden tablet:block" /> Apps in Minutes
         </div>
         <p className="max-w-sm mx-auto mt-6 text-sm font-medium leading-tight text-center text-gray-400 ">
           We have done the heavy lifting so you can focus on building the best
           live audio & video experiences within few lines of code.
         </p>
-        <div className="w-full mx-auto mob:mt-5 tablet:mt-12 sm:flex sm:justify-center ">
+        <div className="w-full mx-auto mob:mt-12 tablet:mt-12 sm:flex sm:gap-4 sm:justify-center ">
           <div className="rounded-md ">
             <Link href="/docs">
-              <a className="flex items-center justify-center gap-2 w-full px-8 py-3 text-base font-medium text-white no-underline bg-brand border border-transparent rounded-xl dark:bg-brand dark:text-white md:py-3 md:text-lg md:px-10 md:leading-6">
+              <a className="flex items-center justify-center gap-2 w-full px-8 py-3 text-base font-medium text-white no-underline bg-brand border border-transparent rounded-xl md:py-3 md:text-lg md:px-10 md:leading-6">
                 Start Building {<ArrowCircleRightIcon className="h-5" />}
               </a>
             </Link>
@@ -98,49 +101,41 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 place-content-center gap-4 hdReady:hidden">
-        <div className="flex flex-col items-center justify-start">
-          <div className=" h-8 tablet:h-10 ">
+      <div className="mob:flex flex-col gap-4 hdReady:hidden">
+        <div className="flex flex-row items-center px-8 h-12 justify-around">
+          <div className=" h-8 tablet:h-10 self-end ">
             {HomepageIconsMob.UD}
           </div>
-        </div>
-        <div className="flex flex-col  items-center justify-center">
-          <div className="h-8 tablet:h-10">
-            {HomepageIconsMob.solana}
-          </div>
-        </div>
-        <div className="flex flex-col gap-7 items-center justify-between">
-          <div className=" h-8 tablet:h-10 ">
+          <div className=" h-8 tablet:h-10 self-start ">
             {HomepageIconsMob.metamask}
           </div>
-          <div className=" h-8 tablet:h-10 ">
-            {HomepageIconsMob.phantom}
-          </div>
-        </div>
-        <div className="flex flex-col gap-7  items-center justify-between">
-          <div className=" h-8 tablet:h-10 ">
+          <div className=" h-8 tablet:h-10 self-start ">
             {HomepageIconsMob.nft}
           </div>
-          <div className=" h-8 tablet:h-10">
+          <div className=" h-8 tablet:h-10 self-end ">
+            {HomepageIconsMob.polygon}
+          </div>
+        </div>
+        <div className="flex flex-row  items-center px-[72px] h-12 justify-around">
+          <div className="h-8 tablet:h-10 self-start">
+            {HomepageIconsMob.solana}
+          </div>
+          <div className=" h-8 tablet:h-10 self-end ">
+            {HomepageIconsMob.phantom}
+          </div>
+          <div className=" h-8 tablet:h-10 self-end">
             {HomepageIconsMob.ens}
           </div>
-        </div>
-        <div className="flex flex-col  items-center justify-center">
-          <div className=" h-8 tablet:h-10 ">
+          <div className=" h-8 tablet:h-10 self-start ">
             {HomepageIconsMob.ethereum}
-          </div>
-        </div>
-        <div className="flex flex-col  items-center justify-start">
-          <div className=" h-8 tablet:h-10 ">
-            {HomepageIconsMob.polygon}
           </div>
         </div>
       </div>
 
-      <div className=" mt-20">
+      <div className=" hdReady:mt-20 mob:mt-10">
         <img src="/images/landingWeb.png" />
       </div>
-    
+
 
       <div className="py-16">
         <div className="mx-auto ">
@@ -153,9 +148,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative mesh">
-        <div className="px-4 py-16 mx-auto sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24">
-          <h2 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF] via-white  to-[#E7A1FF] font-extrabold tracking-tight lg:text-5xl xl:text-6xl text-center">
+      <div className="relative gridBack">
+        <div className="px-4 py-16 mx-auto sm:pt-20 sm:pb-24 lg:max-w-7xl w-full lg:pt-24">
+          <h2 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF]   to-[#E7A1FF] font-extrabold tracking-tight lg:text-5xl xl:text-6xl text-center">
             Heading
           </h2>
           <p className="mx-auto mt-4 text-sm font-normal text-slate-400 lg:max-w-3xl lg:text-xl text-center">
@@ -176,7 +171,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="py-12 w-full px-8 rounded-2xl bg-custom-2 border border-slate-700 ">
+          <div className=" w-full laptop:px-12 laptop:py-12 py-12 px-8  rounded-2xl bg-custom-2 border border-slate-700 ">
             <Tabs.Root
               className="flex flex-col gap-3 md:gap-4 md:flex-row  w-full"
               defaultValue="f1"
@@ -202,19 +197,19 @@ export default function Home() {
                 </Tabs.Trigger>
               </Tabs.List>
               <Tabs.Content
-                className="bg-webRgbColors-6 content rounded-lg h-80 w-full flex justify-center items-center"
+                className="bg-webRgbColors-6 content rounded-md h-80 w-full flex justify-center items-center"
                 value="f1"
               >
                 Content 1
               </Tabs.Content>
               <Tabs.Content
-                className="bg-webRgbColors-6 content rounded-lg h-80 w-full flex justify-center items-center"
+                className="bg-webRgbColors-6 content rounded-md h-80 w-full flex justify-center items-center"
                 value="f2"
               >
                 Content 2
               </Tabs.Content>
               <Tabs.Content
-                className="bg-webRgbColors-6 content rounded-lg h-80 w-full flex justify-center items-center"
+                className="bg-webRgbColors-6 content rounded-md h-80 w-full flex justify-center items-center"
                 value="f3"
               >
                 Content 3
@@ -223,35 +218,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-12 mb-10  md:mb-32">
-          <div className="flex flex-col gap-2 px-4">
+        <div className="max-w-full flex flex-col items-center justify-center gap-12 mb-10  md:mb-32">
+          <div className="flex flex-col justify-center items-center gap-2 px-4">
             <h1 className="text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB]">
               Integrate/Build <br /> Blazingly Fast
             </h1>
-            <p className="text-center text-sm font-normal text-slate-400">
+            <p className=" text-center text-sm font-normal text-slate-400">
               Designed for the Developers, By the Developers. To empower them
               build or leverage the Huddle01 Infra to ship Audio/Video quickly.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 place-items-center px-4">
-            <div className=" h-64 w-80 lg:w-[560px] lg:h-80 border border-slate-700 bg-custom-2 rounded-2xl flex justify-center items-center lg:place-self-end ">
+          <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 place-items-center px-4 w-full">
+            <div className=" h-64 mob:w-full hdReady:w-[560px] laptop:h-80 border border-slate-700 bg-custom-2 rounded-2xl flex justify-center items-center lg:place-self-end ">
               GIF
             </div>
-            <div className=" h-64 w-80 lg:w-[560px] lg:h-80 bg-custom-2 rounded-2xl border border-slate-700 flex justify-center items-center lg:place-self-start ">
+            <div className=" h-64 mob:w-full hdReady:w-[560px] laptop:h-80 bg-custom-2 rounded-2xl border border-slate-700 flex justify-center items-center lg:place-self-start ">
               GIF
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 place-items-start md:place-items-center gap-4">
-            <div className="flex items-center mx-6 gap-3 lg:place-self-end ">
+          <div className="flex mob:flex-col laptop:flex-row laptop:justify-center mx-auto gap-4 w-full">
+            <div className="flex items-center  mx-6 gap-3 max-w-full">
               <span className="text-sm text-slate-400 font-medium">
                 Available{" "}
               </span>{" "}
               {HomepageIcons.react} {HomepageIcons.reactNative}
             </div>
 
-            <div className="flex items-center mx-6 gap-3 lg:place-self-start ">
+            <div className="flex items-center mx-6 gap-3 max-w-full">
               <span className="text-sm text-slate-400 font-medium">
                 Coming Soon{" "}
               </span>{" "}
@@ -264,29 +259,51 @@ export default function Home() {
 
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-2 text-center px-4">
-              <div className="flex justify-between">
+              <div className="flex items-center justify-between">
                 <Image
                   src="/images/CloudL.png"
-                  className=" self-start"
-                  width={90}
-                  height={60}
+                  className=""
+                  width={isMob ? 90 : 175}
+                  height={isMob ? 90 : 120}
                 />
-                <h1 className=" text-3xl font-extrabold self-end text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
-                  Tailored for your Needs
-                </h1>
+                {
+                  !isMob ? (
+                    <div className="flex flex-col gap-4">
+                      <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
+                        Tailored for your Needs
+                      </h1>
+                      <p className="px-3 text-center text-sm font-normal ">
+                        Sky is the limit when you build via Huddle01 SDK. Build
+                        according to your usecase, or go beyond and ship something
+                        crazy!
+                      </p>
+                    </div>
+                  ) : ''
+                }
+
                 <Image
                   src="/images/cloudR.png"
-                  className=" self-start"
-                  width={90}
-                  height={60}
+                  className=""
+                  width={isMob ? 90 : 175}
+                  height={isMob ? 90 : 120}
                 />
               </div>
+              {
+                isMob ? (
+                  <>
+                    <h1 className=" mob:text-3xl laptop:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F8A3A3] to-[#98ECFF]">
+                      Tailored for your Needs
+                    </h1>
+                    <p className="px-3 text-center text-sm font-normal ">
+                      Sky is the limit when you build via Huddle01 SDK. Build
+                      according to your usecase, or go beyond and ship something
+                      crazy!
+                    </p>
+                  </>
+                ) : ''
+              }
 
-              <p className="text-sm font-normal ">
-                Sky is the limit when you build via Huddle01 SDK. Build
-                according to your usecase, or go beyond and ship something
-                crazy!
-              </p>
+
             </div>
 
             <div className="mx-4">
@@ -294,99 +311,102 @@ export default function Home() {
                 className="flex flex-col gap-3 md:gap-4  w-full"
                 defaultValue="f1"
               >
-                <Tabs.List className="flex gap-4 md:w-full pb-1 border-b-[1px] justify-center border-slate-700 ">
+                <Tabs.List className="flex gap-6 md:w-full pb-1 border-b-[1px] justify-center border-slate-700 ">
                   <Tabs.Trigger
-                    className="bg-custom-5 text-base trigger2 text-left py-2 px-6 rounded-lg"
+                    className="bg-custom-5 text-base trigger2 text-left py-2 px-1"
                     value="f1"
                   >
                     Case
                   </Tabs.Trigger>
                   <Tabs.Trigger
-                    className="bg-custom-5 text-base trigger2 text-left py-2 px-6 rounded-lg"
+                    className="bg-custom-5 text-base trigger2 text-left py-2 px-1"
                     value="f2"
                   >
                     Case
                   </Tabs.Trigger>
                   <Tabs.Trigger
-                    className="bg-custom-5 text-base trigger2 text-left py-2 px-6 rounded-lg"
+                    className="bg-custom-5 text-base trigger2 text-left py-2 px-1"
                     value="f3"
                   >
                     Case
                   </Tabs.Trigger>
                 </Tabs.List>
                 <Tabs.Content
-                  className="flex content flex-col md:flex-row md:items-center gap-4 mt-[52px]"
+                  // className="flex content flex-col md:flex-row md:items-center gap-4 mt-[52px]"
                   value="f1"
                 >
-                  <div>
-                    <h1 className=" text-2xl font-bold text-slate-300">
-                      Heading 1
-                    </h1>
-                    <p className="text-base font-normal text-slate-400">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Explicabo illum nostrum obcaecati repellendus quae, quidem
-                      saepe laboriosam quam nulla ab id qui, dolorum facere
-                      labore quos dicta fugit maxime placeat!
-                    </p>
-                  </div>
-                  <div className="bg-custom-2 h-80 rounded-xl w-full mt-4" />
-                </Tabs.Content>
-                <Tabs.Content
-                  className="flex content flex-col md:flex-row md:items-center gap-4 mt-[52px]"
-                  value="f2"
-                >
-                  <div>
-                    <h1 className=" text-2xl font-bold text-slate-300">
-                      Heading 2
-                    </h1>
-                    <p className="text-base font-normal text-slate-400">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Explicabo illum nostrum obcaecati repellendus quae, quidem
-                      saepe laboriosam quam nulla ab id qui, dolorum facere
-                      labore quos dicta fugit maxime placeat!
-                    </p>
-                  </div>
-                  <div className="bg-custom-2 h-80 rounded-xl w-full mt-4" />
-                </Tabs.Content>
-                <Tabs.Content
-                  className="flex content flex-col md:flex-row md:items-center gap-4 mt-[52px]"
-                  value="f3"
-                >
-                  <div>
-                    <h1 className=" text-2xl font-bold text-slate-300">
+                  <div className="grid overflow-hidden laptop:grid-cols-2 laptop:grid-rows-2 gap-2 mt-[52px]">
+                    <div className="bg-custom-2 h-80 rounded-xl mob:w-full laptop:row-span-2 laptop:col-start-2 laptop:col-span-1" />
+
+                    <h1 className=" text-2xl font-bold text-slate-400 mt-8 laptop:row-start-1 laptop:col-span-1 self-end">
                       Heading 3
                     </h1>
-                    <p className="text-base font-normal text-slate-400">
+                    <p className="text-base text-justify tablet:text-left font-normal mt-2 text-slate-500 laptop:row-start-2 laptop:col-span-1">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Explicabo illum nostrum obcaecati repellendus quae, quidem
                       saepe laboriosam quam nulla ab id qui, dolorum facere
                       labore quos dicta fugit maxime placeat!
                     </p>
                   </div>
-                  <div className="bg-custom-2 h-80 rounded-xl w-full mt-4" />
+                </Tabs.Content>
+                <Tabs.Content
+                  // className="flex content flex-col md:flex-row md:items-center gap-4 mt-[52px]"
+                  value="f2"
+                >
+                  <div className="grid overflow-hidden laptop:grid-cols-2 laptop:grid-rows-2 gap-2 mt-[52px]">
+                    <div className="bg-custom-2 h-80 rounded-xl mob:w-full laptop:row-span-2 laptop:col-start-2 laptop:col-span-1" />
+
+                    <h1 className=" text-2xl font-bold text-slate-400 mt-8 laptop:row-start-1 laptop:col-span-1 self-end">
+                      Heading 3
+                    </h1>
+                    <p className="text-base text-justify tablet:text-left font-normal mt-2 text-slate-500 laptop:row-start-2 laptop:col-span-1">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo illum nostrum obcaecati repellendus quae, quidem
+                      saepe laboriosam quam nulla ab id qui, dolorum facere
+                      labore quos dicta fugit maxime placeat!
+                    </p>
+                  </div>
+                </Tabs.Content>
+                <Tabs.Content
+                  // className="flex flex-col md:flex-row md:items-center max-w-full gap-4 mt-[52px]"
+                  value="f3"
+                >
+                  <div className="grid overflow-hidden laptop:grid-cols-2 laptop:grid-rows-2 gap-2 mt-[52px]">
+                    <div className="bg-custom-2 h-80 rounded-xl mob:w-full laptop:row-span-2 laptop:col-start-2 laptop:col-span-1" />
+
+                    <h1 className=" text-2xl font-bold text-slate-400 mt-8 laptop:row-start-1 laptop:col-span-1 self-end">
+                      Heading 3
+                    </h1>
+                    <p className="text-base text-justify tablet:text-left font-normal mt-2 text-slate-500 laptop:row-start-2 laptop:col-span-1">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo illum nostrum obcaecati repellendus quae, quidem
+                      saepe laboriosam quam nulla ab id qui, dolorum facere
+                      labore quos dicta fugit maxime placeat!
+                    </p>
+                  </div>
                 </Tabs.Content>
               </Tabs.Root>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 place-content-center gap-4 px-4 w-full md:mt-52 md:w-2/3">
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 md:pb-24 pb-14 rounded-xl bg-custom-2 md:col-span-3 ">
-              <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#98FFc1]   to-[#3BE191] ">
+          <div className="flex mob:flex-col laptop:flex-row laptop:justify-evenly laptop:gap-8 gap-4 px-4 w-full md:mt-52 mt-24 mb-20 md:mb-32">
+            <button className=" border border-slate-700  rounded-xl py-6 px-8 bg-custom-2 grow ">
+              <a className=" text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#98FFc1]   to-[#3BE191] ">
                 Start Buidling
               </a>
             </button>
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-2 md:row-span-1 md:col-span-2 ">
-              <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF]   to-[#3BB4E1] ">
+            <button className="border border-slate-700  rounded-xl py-6 px-8 bg-custom-2 grow ">
+              <a className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF]   to-[#3BB4E1] ">
                 Pricing
               </a>
             </button>
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-2 md:col-start-1 md:col-span-2 ">
-              <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF]   to-[#E7A1FF] ">
+            <button className="border border-slate-700  rounded-xl py-6 px-8 bg-custom-2 grow ">
+              <a className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#A0C6FF]   to-[#E7A1FF] ">
                 About Us
               </a>
             </button>
-            <button className="flex justify-start items-start border border-slate-700 pt-5 pl-5 pb-14 md:pb-24 rounded-xl bg-custom-2 md:col-span-3 ">
-              <a className="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB] ">
+            <button className="border border-slate-700  rounded-xl py-6 px-8 bg-custom-2 grow ">
+              <a className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#E8CDFF]   to-[#FFA6AB] ">
                 Try Huddle01
               </a>
             </button>
