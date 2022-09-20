@@ -29,7 +29,7 @@ const DetailedFeatureInner = (props: { feature: FeatureProps["feature"] }) => {
   );
 };
 
-const featureWrapperClasses = `block bg-custom-2 max-w-sm border border-slate-700 shadow-lg rounded-xl`;
+const featureWrapperClasses = `block bg-custom-2 max-w-sm border border-slate-700 tablet:px-0 mob:px-4 shadow-lg rounded-xl`;
 
 export const DetailedFeatureLink = (props: {
   href: string;

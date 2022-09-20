@@ -156,8 +156,8 @@ export default function Home() {
           <HomeFeatures />
         </div>
       </div>
-      <div className="gridBack flex flex-col items-center justify-center mx-auto gap-32">
-        <div className="blobBack flex flex-col justify-center items-center gap-12 p-4">
+      <div className="gridBack  flex flex-col items-center justify-center mx-auto gap-32">
+        <div className="blobBack max-w-full flex flex-col justify-center items-center gap-12 p-4">
           <div className="flex flex-col gap-2 px-4">
             <h1 className="text-center text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#B0D9FF] to-[#3BB4E1] ">
               Right Out of the Box
@@ -170,24 +170,24 @@ export default function Home() {
 
           <div className=" w-full laptop:px-12 laptop:py-12 py-12 px-8  rounded-2xl bg-custom-2 border border-slate-700 ">
             <Tabs.Root
-              className="flex flex-col gap-3 md:gap-4 md:flex-row  w-full"
+              className="max-w-full flex flex-col gap-3 md:gap-4 md:flex-row  w-full"
               defaultValue="f1"
             >
-              <Tabs.List className="flex md:flex-col gap-4 md:w-1/3 ">
+              <Tabs.List className="flex md:flex-col overflow-x-auto scrollbar-hide gap-4 md:w-1/3 ">
                 <Tabs.Trigger
-                  className="bg-custom-2 w-full truncate text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 w-full text-sm trigger whitespace-pre text-left p-3 rounded-lg"
                   value="f1"
                 >
                   Feature 1
                 </Tabs.Trigger>
                 <Tabs.Trigger
-                  className="bg-custom-2 truncate text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 w-full text-sm trigger whitespace-pre text-left p-3 rounded-lg"
                   value="f2"
                 >
                   Feature 2
                 </Tabs.Trigger>
                 <Tabs.Trigger
-                  className="bg-custom-2 truncate text-sm trigger text-left p-3 rounded-lg"
+                  className="bg-custom-2 w-full  text-sm trigger whitespace-pre text-left p-3 rounded-lg"
                   value="f3"
                 >
                   Feature 3
