@@ -9,9 +9,11 @@ type FeatureProps = {
 
 const DetailedFeatureInner = (props: { feature: FeatureProps["feature"] }) => {
   const { name, description } = props.feature;
+
+  
   return (
-    <div className="flex flex-col  gap-4 justify-center rounded-xl items-center">
-      <div className=" bg-custom-2 rounded-xl text-center py-24 w-full">
+    <div className="flex flex-col gap-4 justify-evenly rounded-xl tablet:py-5 mob:py-6 tablet:px-6 mob:px-1 items-center">
+      <div className=" bg-webRgbColors-6 rounded-xl text-3xl font-extrabold text-center px-14 py-24 w-full">
         GIF or Image
       </div>
       <div className="inline-flex items-center space-x-3">
@@ -27,7 +29,7 @@ const DetailedFeatureInner = (props: { feature: FeatureProps["feature"] }) => {
   );
 };
 
-const featureWrapperClasses = `block bg-custom-5 py-6 px-4 border border-slate-700 shadow-lg rounded-xl`;
+const featureWrapperClasses = `block bg-custom-2 max-w-sm border border-slate-700 tablet:px-0 mob:px-4 shadow-lg rounded-xl`;
 
 export const DetailedFeatureLink = (props: {
   href: string;
@@ -55,7 +57,7 @@ export default function Feature(props: FeatureProps) {
   }
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center">
       <div>
       </div>
       <div>

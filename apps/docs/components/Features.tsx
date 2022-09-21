@@ -32,11 +32,9 @@ export function DocsFeatures({ detailed = true }: { detailed?: boolean }) {
 
 export function DetailedFeaturesGrid({
   children,
-}: {
-  children?: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-1 px-12 xl:px-48 lg:px-36 sm:px-0 mt-12 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16  lg:gap-x-8 lg:gap-y-12">
+    <div className="grid grid-cols-1  lg:px-36 sm:px-0 mt-12 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16  lg:gap-x-12 lg:gap-y-12">
       {children}
     </div>
   );
