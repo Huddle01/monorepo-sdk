@@ -1,5 +1,6 @@
 {
-  "index": "Introduction",
-  "huddle01-client": "Client",
+  "overview": "Overview",
+  "major-concepts": "Major Concepts",
+  "web-sdk": "Web SDK",
   "huddle01-iframe": "I-frame"
 }
