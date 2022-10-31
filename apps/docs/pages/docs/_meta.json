@@ -1,5 +1,6 @@
 {
   "index": "Introduction",
+  "cli-tool": "CLI Tool (Recommended)",
   "huddle01-iframe": "I-frame",
   "huddle01-client": "Client SDK"
 }
