@@ -22,7 +22,7 @@ import { Footer } from "../Footer";
 
 export default function Home() {
   const onClick = () => {
-    copy("npx create-turbo@latest");
+    copy("npx create-huddle");
     toast.success("Copied to clipboard");
   };
 
@@ -92,7 +92,7 @@ export default function Home() {
               onClick={onClick}
               className="flex gap-2 items-center justify-center w-full px-8 py-3 font-mono text-base font-semibold text-slate-400 bg-custom-1 border-2 border-slate-700 rounded-xl bg-opacity-5 dark:bg-custom-1 dark:text-slate-400 dark:border-gray-700 dark:bg-opacity-5 betterhover:hover:bg-gray-50 betterhover:dark:hover:bg-gray-900 md:py-3 md:text-base md:leading-6 md:px-10"
             >
-              npx create-turbo
+              npx create-huddle
               <span className="h-5">{HomepageIcons.clipboard}</span>
             </button>
           </div>
