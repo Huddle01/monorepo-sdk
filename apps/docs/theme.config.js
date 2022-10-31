@@ -60,5 +60,6 @@ const theme = {
   nextThemes: {
     defaultTheme: "dark",
   },
+  darkMode: false,
 };
 export default theme;
