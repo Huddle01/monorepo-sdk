@@ -47,5 +47,5 @@ npx create-huddle01 --name my-app -tool iframe -ts
 
 ```bash
 # npm
-npx create-huddle01 --name my-app -tool iframe -ts
+npx create-huddle01 --name my-app -tool client -ts
 ```
