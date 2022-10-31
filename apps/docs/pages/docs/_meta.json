@@ -1,6 +1,5 @@
 {
-  "overview": "Overview",
-  "major-concepts": "Concepts",
-  "web-sdk": "Web SDK",
-  "huddle01-iframe": "I-frame"
+  "index": "Introduction",
+  "huddle01-iframe": "I-frame",
+  "huddle01-client": "Client SDK"
 }
