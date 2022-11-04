@@ -1,4 +1,4 @@
-# Quick Start
+# CLI Tool Summary
 
 ```bash
 Usage: npx create-huddle01 [options]
