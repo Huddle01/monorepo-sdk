@@ -58,6 +58,7 @@ const theme = {
   },
   footer: { component: <Footer /> },
   nextThemes: {
+    themes: ["dark"],
     defaultTheme: "dark",
   },
   darkMode: false,
