@@ -21,7 +21,7 @@
     "next": "12.2.5",
     "next-themes": "^0.2.0",
     "nextra": "2.0.0-beta.24",
-    "nextra-theme-docs": "2.0.0-beta.24",
+    "nextra-theme-docs": "2.0.0-beta.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "2.1.1",

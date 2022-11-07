@@ -4,7 +4,6 @@ import { Footer } from "./components/Footer";
 import Huddle01 from "./components/logos/Huddle01";
 
 const theme = {
-  github: "https://github.com/Huddle-01/huddle01-docs",
   project: {
     link: "https://github.com/Huddle-01/huddle01-docs",
   },
@@ -19,6 +18,7 @@ const theme = {
   feedback: {
     link: "Question? Give us feedback →",
   },
+  logoLink: false,
   logo: function LogoActual() {
     return (
       <>
@@ -59,6 +59,7 @@ const theme = {
   footer: { component: <Footer /> },
   nextThemes: {
     themes: ["dark"],
+    forcedTheme: "dark",
     defaultTheme: "dark",
   },
   darkMode: false,
