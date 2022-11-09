@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const Button = () => {
   const { address, isConnected, isDisconnected } = useAccount();
@@ -10,6 +11,7 @@ const Button = () => {
   useEffect(() => {
     if (apiKey.length && isDisconnected) {
       console.log("Wallet Disconnected");
+      toast.success("Wallet Disconnected");
       setApiKey("");
       return;
     }
@@ -53,9 +55,15 @@ const Button = () => {
         }
       } catch (error) {
         console.error("Error: ", { error });
+        toast.error("Unable to connect to server");
       }
     })();
   }, [address, isConnected, isDisconnected]);
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(apiKey);
+    toast.success("Api Key Copied to clipboard");
+  };
 
   return (
     <>
@@ -63,10 +71,14 @@ const Button = () => {
         <ConnectButton />
       </div>
       {apiKey.length ? (
-        <div className="bg-[#2D3748] blur-sm cursor-pointer hover:blur-none transition duration-200 select-none w-fit mx-auto px-4 py-2 rounded-lg shadow-md truncate text-white text-center">
+        <div
+          onClick={handleCopyToClipboard}
+          className="bg-[#2D3748] blur-sm cursor-pointer hover:blur-none transition duration-200 select-none w-fit mx-auto px-4 py-2 rounded-lg shadow-md truncate text-white text-center"
+        >
           <p>{apiKey}</p>
         </div>
       ) : null}
+      <Toaster position="bottom-right" />
     </>
   );
 };
