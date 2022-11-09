@@ -43,8 +43,8 @@ export default async function handler(
         headers: {
           "Content-Type": "application/json",
           "x-hasura-admin-secret": __prod__
-            ? process.env.NEXT_PUBLIC_HASURA_SECRET_PROD
-            : process.env.NEXT_PUBLIC_HASURA_SECRET_DEV,
+            ? process.env.HASURA_SECRET_PROD
+            : process.env.HASURA_SECRET_DEV,
         },
       }
     );
