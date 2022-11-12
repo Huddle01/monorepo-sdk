@@ -1,0 +1,7 @@
+{
+  "build-from-scratch": "Build from Sratch",
+  "build-from-existing-app": "Build from Existing App",
+  "hooks": "Hooks",
+  "store-states": "Store States",
+  "methods": "Client Methods"
+}

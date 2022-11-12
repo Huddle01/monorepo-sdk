@@ -1,8 +1,5 @@
 {
   "architecture": "Web SDK Architecture",
   "prerequisite": "Pre-requisite",
-  "quickstart": "QuickStart",
-  "getting-started": "Getting Started",
-  "client-methods": "Client Methods",
-  "huddle-store": "Huddle Store"
+  "walkthrough": "Web SDK Walkthrough"
 }
