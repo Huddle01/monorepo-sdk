@@ -1,5 +1,4 @@
 {
-  "introduction": "Introduction",
-  "sdkusage": "SDK Usage",
-  "faq": "FAQs"
+  "architecture": "SDK Architecture",
+  "sdk-overview": "SDK Overview"
 }

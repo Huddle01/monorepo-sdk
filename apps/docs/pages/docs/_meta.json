@@ -1,6 +1,8 @@
 {
+  "introduction": "introduction",
   "overview": "Overview",
   "major-concepts": "Concepts",
   "web-sdk": "Web SDK",
-  "huddle01-iframe": "I-frame"
+  "huddle01-iframe": "I-frame",
+  "faq": "FAQs"
 }
