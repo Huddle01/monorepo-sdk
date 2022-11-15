@@ -1,10 +1,11 @@
 {
-  "introduction": "introduction",
+  "introduction": "Introduction",
+  "getting-started": "Getting Started",
   "overview": "Overview",
   "quick-start": "Quick Start",
   "major-concepts": "Concepts",
   "web-sdk": "Web SDK",
-  "huddle01-iframe": "I-frame",
+  "huddle01-iframe": "I-Frame",
   "faq": "FAQs",
   "index": "Remove this Index Page"
 }

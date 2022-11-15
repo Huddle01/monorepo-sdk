@@ -1,0 +1,57 @@
+---
+title: Add To Existing Project
+description: How to add huddle01 to an existing project
+---
+
+# Add Huddle01 To Existing Project
+
+---
+
+Huddle01 can be easily integrated to any existing project to leverage the infrastructure of the Huddle01 platform.
+
+> Make sure to have the prequisites installed ( Check out the [Getting Started](/getting-started) guide for more details )
+
+The `huddleClient` is the root class of the SDK. It is used to initialize and to access all the fetaures of the SDK.
+To initialize the HuddleClient `getHuddleClient` function provide inside the module:
+
+```jsx
+import { getHuddleClient } from '@huddle01/huddle01-client';
+
+const huddleClient = getHuddleClient();
+```
+
+> **Note:** The `HuddleClient` is a singleton class. So you should only have one instance of it in your project.
+> If you want to use the `HuddleClient` in multiple places in your project, you should import it from a single file.
+> This will ensure that you are using the same instance of the `HuddleClient` everywhere.
+
+#### Initialize the HuddleClient
+
+To enable all the features of the SDK, You should wrap your project with the `HuddleProvider` component.
+The `HuddleClientProvider` is a wrapper component for the `HuddleClient` class. It is used to provide the `HuddleClient` instance to all the child components in the project.
+
+```jsx
+import { HuddleClientProvider, getHuddleClient } from '@huddle01/huddle01-client';
+
+const App = () => {
+  const huddleClient = getHuddleClient();
+  return (
+    <HuddleClientProvider client = {huddleClient} >
+      <YourApp>
+        ...
+      </YourApp>
+    </HuddleClientProvider>
+  );
+};
+```
+
+> **Note:** The `HuddleClientProvider` should be the root component of your project.
+> It should wrap all the other components in your project. You can use the `HuddleClientProvider` in any component in your project.
+> But it is recommended to use it in the root component of your project.
+
+And that's it. You have successfully integrated the Huddle01 SDK to your project.
+
+## Next Steps
+
+Now that you have successfully integrated the Huddle01 SDK to your project, you can start using the SDK to build your own features.
+
+Check out the [Client Methods](/getting-started) guide to learn more about how to invoke different `HuddleClient` methods to build your own features.
