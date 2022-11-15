@@ -14,7 +14,7 @@ import { useHuddleStore } from "huddle01-client/hooks";
 const isCamPaused = useHuddleStore((state) => state.isCamPaused);
 ```
 
-## `useHuddleClientContext`
+## `getHuddleClient`
 
 ### Params
 
