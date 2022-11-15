@@ -42,9 +42,9 @@ huddleClient.disableWebcam();
 
 ### Params
 
-| Param       | Type            | Required |
-| ----------- | --------------- | -------- |
-| mediaDevice | MediaDeviceInfo | optional |
+| Param       | Type            | Required                                  |
+| ----------- | --------------- | ----------------------------------------- |
+| mediaDevice | MediaDeviceInfo | <font color="lightblue">`optional`</font> |
 
 ### Code Snippet
 
@@ -64,9 +64,9 @@ huddleClient.enableMic();
 
 ### Params
 
-| Param       | Type            | Required |
-| ----------- | --------------- | -------- |
-| mediaDevice | MediaDeviceInfo | optional |
+| Param       | Type            | Required                                  |
+| ----------- | --------------- | ----------------------------------------- |
+| mediaDevice | MediaDeviceInfo | <font color="lightblue">`optional`</font> |
 
 ### Code Snippet
 
