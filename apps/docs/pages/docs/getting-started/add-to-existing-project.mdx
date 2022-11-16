@@ -7,33 +7,54 @@ description: How to add huddle01 to an existing project
 
 ---
 
-Huddle01 can be easily integrated to any existing project to leverage the infrastructure of the Huddle01 platform.
+Huddle01 can be easily integrated to any existing project to leverage the infrastructure of the Huddle01 platform. This guide will walk you through the steps to add Huddle01 to an existing project.
+We provide you with client functions to build a robust and secure connection to the Huddle01 platform. The client functions are available in the [client-methods](/huddle01-client) package.
 
-> Make sure to have the prequisites installed ( Check out the [Getting Started](/getting-started) guide for more details )
+## Prerequisites
+
+> **NOTE** You must have an **API Key** to access the Huddle01 Infrastructure.
+> You can get an **API Key** by signing up for a free account at [API KEY](https://huddle01.com)
+
+## Dependencies
+
+You must have the latest version of `Nodejs` installed on your machine. You can download the latest version of `Nodejs` from [here](https://nodejs.org/en/download/).
+
+Install the `huddle01-client` package using the following command:
+
+```bash
+## npm
+npm install --save @huddle01/huddle01-client
+## yarn
+yarn add @huddle01/huddle01-client
+```
+
+## Usage
 
 The `huddleClient` is the root class of the SDK. It is used to initialize and to access all the fetaures of the SDK.
 To initialize the HuddleClient `getHuddleClient` function provide inside the module:
 
 ```jsx
+//src/App.tsx
 import { getHuddleClient } from '@huddle01/huddle01-client';
 
-const huddleClient = getHuddleClient();
+const huddleClient = getHuddleClient('<Your-API-Key>');
 ```
 
 > **Note:** The `HuddleClient` is a singleton class. So you should only have one instance of it in your project.
 > If you want to use the `HuddleClient` in multiple places in your project, you should import it from a single file.
 > This will ensure that you are using the same instance of the `HuddleClient` everywhere.
 
-#### Initialize the HuddleClient
+## Initialize the HuddleClient
 
 To enable all the features of the SDK, You should wrap your project with the `HuddleProvider` component.
 The `HuddleClientProvider` is a wrapper component for the `HuddleClient` class. It is used to provide the `HuddleClient` instance to all the child components in the project.
 
 ```jsx
+//src/App.tsx
 import { HuddleClientProvider, getHuddleClient } from '@huddle01/huddle01-client';
 
 const App = () => {
-  const huddleClient = getHuddleClient();
+  const huddleClient = getHuddleClient('<Your-API-Key>')
   return (
     <HuddleClientProvider client = {huddleClient} >
       <YourApp>
@@ -49,6 +70,15 @@ const App = () => {
 > But it is recommended to use it in the root component of your project.
 
 And that's it. You have successfully integrated the Huddle01 SDK to your project.
+
+## Using the HuddleClient
+
+As mentioned above, the `HuddleClient` is the root class of the SDK. It exposes many methods to access the features of the SDK.
+for example to join a room. You can use the `join` method of the `HuddleClient` class.
+
+```jsx
+huddleClient.join('roomId');
+```
 
 ## Next Steps
 
