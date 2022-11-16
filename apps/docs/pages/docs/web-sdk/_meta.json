@@ -1,5 +1,7 @@
 {
   "architecture": "Web SDK Architecture",
   "prerequisite": "Pre-requisite",
-  "walkthrough": "Web SDK Walkthrough"
+  "methods": "Client Methods",
+  "hooks": "Hooks",
+  "store-states": "Store States"
 }
