@@ -3,5 +3,6 @@
   "prerequisite": "Pre-requisite",
   "methods": "Client Methods",
   "hooks": "Hooks",
-  "store-states": "Store States"
+  "store-states": "Store States",
+  "types": "Types"
 }
