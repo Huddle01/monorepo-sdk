@@ -1,8 +1,10 @@
 {
   "architecture": "Web SDK Architecture",
-  "prerequisite": "Pre-requisite",
+  "prerequisite": "Pre-requisites",
   "methods": "Client Methods",
   "hooks": "Hooks",
   "store-states": "Store States",
-  "types": "Types"
+  "types": "Types",
+  "sample-apps": "Sample Applications",
+  "api-key": "Get your API Key"
 }

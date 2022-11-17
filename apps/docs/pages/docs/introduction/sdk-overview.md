@@ -1,6 +1,4 @@
-## SDK Usage
-
-### **Overview**
+## SDK Overview
 
 Our SDK gives you the ability to power your application by leveraging the Huddle01 infrastructure. Our SDK offers features such as  state management, audio/video media exchange and much more. 
 
