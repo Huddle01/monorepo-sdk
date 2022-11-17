@@ -1,0 +1,11 @@
+{
+  "room-states": "Room",
+  "me-states": "User",
+  "peer-states": "Peers",
+  "cam-states": "Camera",
+  "mic-states": "Mic",
+  "chat-states": "Chat",
+  "speaker-states": "Active Speaker",
+  "network-states": "Networks",
+  "host-controls-states": "Host Controls"
+}

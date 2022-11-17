@@ -1,0 +1,68 @@
+---
+title: Room States
+description: Store States for Peers
+---
+
+# Room States
+
+Room is the entity that stores the meeting details, Every peer connects to a room to enable the meeting.
+Room has a unique ID named `roomId`, which is used to identify the room.
+
+### States
+
+```typescript
+type IRoomState = {
+  roomId: string;
+  joined: boolean;
+  droppedState: {
+    type: IDropReason; // left, timeout, kicked, unhandled, not-joined, denied, closedByHost
+    isDropped: boolean;
+  };
+  createdAt: number;
+  isRoomLocked: boolean;
+};
+```
+
+`roomId` is the unique ID of the room.<br />
+`joined` is a boolean value that indicates whether the peer has joined the room or not.<br />
+`droppedState` is an object that contains the reason for the peer to leave the room.<br />
+`createdAt` is the timestamp when the room was created.<br />
+`isRoomLocked` is a boolean value that indicates whether the room is locked or not.<br />
+
+> **NOTE:** All the above values are inside the object `roomState` and needs to accessed from there
+
+#### `droppedState`
+
+This is very important state, as it indicates the reason for the peer to leave the room.
+it can be one of the following values:
+
+- `left`: Peer left the room.
+- `timeout`: Peer timed out.
+- `kicked`: Peer was kicked out of the room.
+- `unhandled`: Peer was disconnected due to an unhandled error.
+- `not-joined`: Peer was not joined to the room.
+- `denied`: Peer was denied to join the room by the host.
+- `closedByHost`: Peer was disconnected as the host closed the room.
+
+### Example
+
+**You can access the room state using the `useHuddleStore` hook.**
+
+```jsx
+import { useHuddleStore } from "huddle01-client/hooks";
+
+const App = () => {
+    const roomId = useHuddleStore(state => state.roomState.roomId);
+
+    return (
+        <Component>
+            RoomId: {roomId}
+            ...
+        <Component />
+    )
+}
+
+```
+
+> **NOTE: Doing this will subscribe `roomId` state to that component and will re-render the component when the state changes**. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.

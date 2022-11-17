@@ -1,0 +1,53 @@
+---
+title: Me Store States
+description: Store States for Peers
+---
+
+# User Store States
+
+User Store or generally called `me` store. contains all the states of the current joined user client. It is a special store that is not shared with other peers. It is a store that is only available to the current user.
+
+### Me Store States
+
+```typescript
+type MeState = {
+    peerId: string;
+    displayName: string;
+    avatarUrl: string;
+    isSharePaused: boolean;
+    isCamPaused: boolean;
+    isMicPaused: boolean;
+    reaction: string;
+}
+```
+
+`peerId` is the unique id of the current user.<br />
+`displayName` is the display name of the current user.<br />
+`avatarUrl` is the avatar url of the current user.<br />
+`isSharePaused` is the state of the screen share of the current user.<br />
+`isCamPaused` is the state of the camera of the current user.<br />
+`isMicPaused` is the state of the microphone of the current user.<br />
+`reaction` is the reaction of the current user.<br />
+
+### Example
+
+**You can access the room state using the `useHuddleStore` hook.**
+
+```jsx
+import { useHuddleStore } from "huddle01-client/hooks";
+
+const App = () => {
+    const peerId = useHuddleStore(state => state.peerId);
+
+    return (
+        <Component>
+            peerId: {peerId}
+            ...
+        <Component />
+    )
+}
+
+```
+
+> **NOTE: Doing this will subscribe `peerId` state to that component and will re-render the component when the state changes**. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.
