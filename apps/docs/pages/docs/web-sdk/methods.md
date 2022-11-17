@@ -22,7 +22,7 @@ All other HuddleClient functions are only available after the `join()` method is
 
 > NOTE: `roomID` is the unique identifier of the room to be joined, while joining more than one peer to the room make sure to use the same roomID.
 >
-> One is expected to use the same roomID for all the peers meant to be joining the room.
+> One is expected to use the same roomID for all the peers meant to be joining the same room.
 
 ### Code Snippet
 
@@ -207,9 +207,11 @@ huddleClient.changeAvatarUrl(
 );
 ```
 
-## `sendDM()`
+## <font color="yellow">async</font> `sendDM()`
 
 ### Description
+
+`sendDM()` to send a direct message to a peer in the same room.
 
 ### Params
 
@@ -219,13 +221,18 @@ huddleClient.changeAvatarUrl(
 | toId    | string | <font color="red">`required`</font> |
 | fromId  | string | <font color="red">`required`</font> |
 
+### Return Type : `Promise<Void>`
+
 ### Code Snippet
 
 ```jsx
-huddleClient.sendDM("Hi! Welcome to Huddle01!", "rDVjHUcf4X", "zlQpt69c69");
+await huddleClient.sendDM("Hi! Welcome to Huddle01!", // message string
+"rDVjHUcf4X", // recipient's peerId / toId
+ "zlQpt69c69" // sender's peerId / fromId
+ );
 ```
 
-## `toggleRaiseHand()`
+## <font color="yellow">async</font> `toggleRaiseHand()`
 
 ### Description
 
@@ -243,7 +250,7 @@ huddleClient.changeAvatarUrl(
 );
 ```
 
-## `sendReaction()`
+## <font color="yellow">async</font> `sendReaction()`
 
 ### Description
 
@@ -259,51 +266,59 @@ huddleClient.changeAvatarUrl(
 huddleClient.sendReaction("🚀");
 ```
 
-## `allowLobbyPeerToJoinRoom()`
+## <font color="yellow">async</font> `allowLobbyPeerToJoinRoom()`
 
 ### Description
+
+`allowLobbyPeerToJoinRoom()` to allow a peer in Lobby to join the room from the lobby using respective `peerId`.
 
 ### Params
 
-| Param         | Type   | Required                            |
-| ------------- | ------ | ----------------------------------- |
-| peerIdToAdmit | string | <font color="red">`required`</font> |
+| Param  | Type   | Required                            |
+| ------ | ------ | ----------------------------------- |
+| peerId | string | <font color="red">`required`</font> |
 
 ### Code Snippet
 
 ```jsx
-huddleClient.allowLobbyPeerToJoinRoom("rDVjHUcf4X");
+huddleClient.allowLobbyPeerToJoinRoom("rDVjHUcf4X"); // allow peer in lobby with peerId "rDVjHUcf4X" to join the room
 ```
 
-## `allowAllLobbyPeersToJoinRoom()`
+## <font color="yellow">async</font> `allowAllLobbyPeersToJoinRoom()`
 
 ### Description
+
+`allowAllLobbyPeersToJoinRoom()` to allow all peers in Lobby to join the room from the lobby.
 
 ### Code Snippet
 
 ```jsx
-huddleClient.allowAllLobbyPeersToJoinRoom();
+huddleClient.allowAllLobbyPeersToJoinRoom(); // allow all lobby peers in room
 ```
 
-## `disallowLobbyPeerFromJoiningRoom()`
+## <font color="yellow">async</font> `disallowLobbyPeerFromJoiningRoom()`
 
 ### Description
+
+`disallowLobbyPeerFromJoiningRoom()` to disallow a peer in Lobby from joining the room using respective `peerId`.
 
 ### Params
 
-| Param            | Type   | Required                            |
-| ---------------- | ------ | ----------------------------------- |
-| peerIdToDisallow | string | <font color="red">`required`</font> |
+| Param  | Type   | Required                            |
+| ------ | ------ | ----------------------------------- |
+| peerId | string | <font color="red">`required`</font> |
 
 ### Code Snippet
 
 ```jsx
-huddleClient.disallowLobbyPeerFromJoiningRoom("rDVjHUcf4X");
+huddleClient.disallowLobbyPeerFromJoiningRoom("rDVjHUcf4X"); // disallow peer in lobby with peerId "rDVjHUcf4X" from joining the room
 ```
 
 ## `disallowAllLobbyPeerFromJoiningRoom()`
 
 ### Description
+
+`disallowAllLobbyPeerFromJoiningRoom()` to disallow all peers in Lobby from joining the room.
 
 ### Code Snippet
 
