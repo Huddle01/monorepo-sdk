@@ -16,7 +16,7 @@ const isCamPaused = useHuddleStore((state) => state.isCamPaused);
 
 ## `getHuddleClient`
 
-### Params
+**Params**
 
 | Param  | Type    | Required                                  |
 | ------ | ------- | ----------------------------------------- |

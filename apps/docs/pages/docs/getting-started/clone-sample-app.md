@@ -43,10 +43,14 @@ yarn
 ### Run the Project
 <br />
 ```bash
-yarn start
+yarn dev
 ```
 Open your browser and check out the sample app
 
 iFrame:
 <br />
 <img src="/images/cli-tool/iFrame_cli.png" alt="drawing" width="60%"/>
+
+Client:
+<br />
+<img src="/images/cli-tool/client_cli.png" alt="drawing" width="60%"/>
