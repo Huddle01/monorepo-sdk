@@ -4,3 +4,50 @@ description: Store States for Peers
 ---
 
 # Camera States
+
+If you need to access the `MediaStream` of the client. These values are exposed in the store for the client.
+
+> **NOTE:** Camera stream for the client is available directly on the store but for the all the peers there streams are available in the `peers` store which needs to be accessed using the `usePeerTrack()` hook.
+
+### Camera Store
+
+```typescript
+type IMediaSlice = {
+    mediaDevice: MediaDeviceInfo | null;
+    stream: MediaStream | null;
+    streamError: {
+        type: IMediErrorType;
+        blocked: boolean;
+    } | null;
+    deviceLoading: boolean;
+    streamsArry: MediaStream[];
+}
+```
+
+`mediaDevice` - The device that is currently being used for the stream. <br />
+`stream` - The stream that is currently being used.<br />
+`streamError` - The error that is thrown when the stream is not available.<br />
+`deviceLoading` - The loading state of the device.<br />
+`streamsArry` - The array of all the streams that are currently being used.<br />
+
+`streamError`
+
+This is the error that is thrown when the stream is not available. The error has two properties `type` and `blocked`.
+possible case for this to occur might be if user denied permission to access the camera or if the camera is not available.
+
+> **NOTE:** The `blocked` property is available if any of the error cases occur.
+
+`type` - The type of error that is thrown.<br />
+
+- `NotAllowedError` - The user has denied permission to access the camera.
+- `NotFoundError` - The camera is not available.
+- `NotReadableError` - The camera is already in use.
+- `OverconstrainedError` - The camera is not available.
+- `SecurityError` - The camera is not available.
+- `AbortError` - The camera is not available.
+- `NotSupportedError` - The camera is not available.
+- `TypeError` - The camera is not available.
+
+### Example
+
+**You can access the camera state using the `useHuddleStore` hook.**
