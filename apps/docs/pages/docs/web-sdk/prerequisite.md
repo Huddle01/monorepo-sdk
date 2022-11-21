@@ -11,7 +11,7 @@ or Download Node.js from their official [website](https://nodejs.org)
 
 Pro Tip: Use NVM or FVM to install Node.js as they help in version management and easy updation
 
-### Verify Node.js is installed
+ **Verify Node.js is installed**
 
     ```bash
     > node --version
@@ -24,14 +24,16 @@ Pro Tip: Use NVM or FVM to install Node.js as they help in version management an
 > npm install --global yarn
 ```
 
-### Verify Yarn is installed
+**Verify Yarn is installed**
 
     ```bash
     #yarn
     > yarn --version
     ```
 
-## To Initiliaze a `huddle01-client` example app
+## Sample application
+
+To initialise a `huddle01-client` example app, run the following command
 
 > **_NOTE:_** Add `-ts` or `--typescript` flag to init a typescript app
 

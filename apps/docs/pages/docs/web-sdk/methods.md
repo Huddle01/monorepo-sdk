@@ -6,14 +6,14 @@ sidebar_position: 2
 
 ## <font color="yellow">async</font> `join()`
 
-### Description
-
 `Join()` is the first method to be invoked to join the room.
 All other HuddleClient functions are only available after the `join()` method is invoked.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Params
+<br /><br />
+<font size="4"> Params </font>
 
 | Param      | Type                               | Required                            |
 | ---------- | ---------------------------------- | ----------------------------------- |
@@ -24,7 +24,8 @@ All other HuddleClient functions are only available after the `join()` method is
 >
 > One is expected to use the same roomID for all the peers meant to be joining the same room.
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet** </font>
 
 ```jsx
 await huddleClient.join("rDVjHUcf4X", // roomId
@@ -36,13 +37,13 @@ await huddleClient.join("rDVjHUcf4X", // roomId
 
 ## <font color="yellow">async</font> `enableWebcam()`
 
-### Description
-
 `enableWebcam()` to enable the webcam of the user.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.enableWebcam();
@@ -50,13 +51,16 @@ huddleClient.enableWebcam();
 
 ## <font color="yellow">async</font> `disableWebcam()`
 
-### Description
+<br />
+<font size="5"> **Description** </font>
 
 `disableWebcam()` to disable the webcam of the user.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.disableWebcam();
@@ -64,13 +68,13 @@ huddleClient.disableWebcam();
 
 ## `getWebcams()`
 
-### Description
-
 `getWebcams()` to get the list of available webcams.
 
-### Return Type : `MediaDeviceInfo[]`
+<br />
+<font size="5"> **Return Type : `MediaDeviceInfo[]`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 const webcamList = huddleClient.getWebcams();
@@ -78,20 +82,21 @@ const webcamList = huddleClient.getWebcams();
 
 ## <font color="yellow">async</font> `changeWebcam()`
 
-### Description
-
 `changeWebcam()` to switch the webcam of the user. <br/>
 To fetch the list of available webcams use `getWebcams()` which returns `MediaDeviceInfo[]`.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Params
+<br />
+<font size="4"> Params </font>
 
 | Param       | Type            | Required                                  |
 | ----------- | --------------- | ----------------------------------------- |
 | mediaDevice | MediaDeviceInfo | <font color="lightblue">`optional`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 const webcamList = huddleClient.getWebcams();
@@ -102,13 +107,13 @@ await huddleClient.changeWebcam(webcamList[0]);
 
 ## <font color="yellow">async</font> `enableMic()`
 
-### Description
-
 `enableMic()` to enable the microphone of the user.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.enableMic();
@@ -116,16 +121,16 @@ huddleClient.enableMic();
 
 ## <font color="yellow">async</font> `disableMic()`
 
-### Description
-
 `disableMic()` to disable the microphone of the user.
 
 > Note : This will stop the audio stream from the user's microphone and Mute the user.
 > using `muteMic()` is preffered over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter involves stopping the audio stream from the user's microphone.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.disableMic();
@@ -133,13 +138,13 @@ huddleClient.disableMic();
 
 ## `getMics()`
 
-### Description
-
 `getMics()` to get the list of available microphones.
 
-### Return Type : `MediaDeviceInfo[]`
+<br />
+<font size="5"> **Return Type : `MediaDeviceInfo[]`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 const micList = huddleClient.getMics();
@@ -147,18 +152,18 @@ const micList = huddleClient.getMics();
 
 ## <font color="yellow">async</font> `changeMic()`
 
-### Description
-
 `changeMic()` to switch the microphone of the user. <br/>
 To fetch the list of available microphones use `getMics()` which returns `MediaDeviceInfo[]`.
 
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param       | Type            | Required                                  |
 | ----------- | --------------- | ----------------------------------------- |
 | mediaDevice | MediaDeviceInfo | <font color="lightblue">`optional`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet** </font>
 
 ```jsx
 const micList = huddleClient.getMics();
@@ -168,17 +173,17 @@ await huddleClient.changeMic(micList[0]);
 
 ## <font color="yellow">async</font> `muteMic()`
 
-### Description
-
 `muteMic()` to mute the microphone of the user.
 
 > Note : This will stop the audio stream from the user's microphone and Mute the user.
 > using `muteMic()` is preffered over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter involves stopping the audio stream from the user's microphone.
 > Use `muteMic()` and `unmuteMic()` when you want a quick mute/unmute functionality.
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 await huddleClient.muteMic();
@@ -186,20 +191,20 @@ await huddleClient.muteMic();
 
 ## `changeAvatarUrl()`
 
-### Description
-
 `changeAvatarUrl()` to change the avatar image URL of the user.
 
 > NOTE : The avatar image URL should be a valid URL and should be accessible on the internet.<br/>
 > Supported Image Formats : PNG, JPG, JPEG, SVG
 
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param     | Type       | Required                            |
 | --------- | ---------- | ----------------------------------- |
 | avatarUrl | string url | <font color="red">`required`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.changeAvatarUrl(
@@ -209,11 +214,10 @@ huddleClient.changeAvatarUrl(
 
 ## <font color="yellow">async</font> `sendDM()`
 
-### Description
-
 `sendDM()` to send a direct message to a peer in the same room.
 
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param   | Type   | Required                            |
 | ------- | ------ | ----------------------------------- |
@@ -221,9 +225,11 @@ huddleClient.changeAvatarUrl(
 | toId    | string | <font color="red">`required`</font> |
 | fromId  | string | <font color="red">`required`</font> |
 
-### Return Type : `Promise<Void>`
+<br />
+<font size="5"> **Return Type : `Promise<Void>`** </font>
 
-### Code Snippet
+<br /><br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 await huddleClient.sendDM("Hi! Welcome to Huddle01!", // message string
@@ -234,15 +240,15 @@ await huddleClient.sendDM("Hi! Welcome to Huddle01!", // message string
 
 ## <font color="yellow">async</font> `toggleRaiseHand()`
 
-### Description
-
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param        | Type    | Required                            |
 | ------------ | ------- | ----------------------------------- |
 | isHandRaised | boolean | <font color="red">`required`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.changeAvatarUrl(
@@ -252,15 +258,15 @@ huddleClient.changeAvatarUrl(
 
 ## <font color="yellow">async</font> `sendReaction()`
 
-### Description
-
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param    | Type                                                                                         | Required                            |
 | -------- | -------------------------------------------------------------------------------------------- | ----------------------------------- |
 | reaction | '', '😂', '😢', '😦', '😍', '🤔', '👀', '🙌', '👍', '👎', '🔥', '🍻', '🚀', '🎉', '❤️', '💯' | <font color="red">`required`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.sendReaction("🚀");
@@ -268,17 +274,17 @@ huddleClient.sendReaction("🚀");
 
 ## <font color="yellow">async</font> `allowLobbyPeerToJoinRoom()`
 
-### Description
-
 `allowLobbyPeerToJoinRoom()` to allow a peer in Lobby to join the room from the lobby using respective `peerId`.
 
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |
 | peerId | string | <font color="red">`required`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.allowLobbyPeerToJoinRoom("rDVjHUcf4X"); // allow peer in lobby with peerId "rDVjHUcf4X" to join the room
@@ -286,11 +292,10 @@ huddleClient.allowLobbyPeerToJoinRoom("rDVjHUcf4X"); // allow peer in lobby with
 
 ## <font color="yellow">async</font> `allowAllLobbyPeersToJoinRoom()`
 
-### Description
-
 `allowAllLobbyPeersToJoinRoom()` to allow all peers in Lobby to join the room from the lobby.
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.allowAllLobbyPeersToJoinRoom(); // allow all lobby peers in room
@@ -298,17 +303,17 @@ huddleClient.allowAllLobbyPeersToJoinRoom(); // allow all lobby peers in room
 
 ## <font color="yellow">async</font> `disallowLobbyPeerFromJoiningRoom()`
 
-### Description
-
 `disallowLobbyPeerFromJoiningRoom()` to disallow a peer in Lobby from joining the room using respective `peerId`.
 
-### Params
+<br />
+<font size="4"> **Params** </font>
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |
 | peerId | string | <font color="red">`required`</font> |
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet** </font>
 
 ```jsx
 huddleClient.disallowLobbyPeerFromJoiningRoom("rDVjHUcf4X"); // disallow peer in lobby with peerId "rDVjHUcf4X" from joining the room
@@ -316,11 +321,10 @@ huddleClient.disallowLobbyPeerFromJoiningRoom("rDVjHUcf4X"); // disallow peer in
 
 ## `disallowAllLobbyPeerFromJoiningRoom()`
 
-### Description
-
 `disallowAllLobbyPeerFromJoiningRoom()` to disallow all peers in Lobby from joining the room.
 
-### Code Snippet
+<br />
+<font size="5"> **Code Snippet:** </font>
 
 ```jsx
 huddleClient.disallowAllLobbyPeerFromJoiningRoom();
