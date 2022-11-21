@@ -1,11 +1,11 @@
 ---
 title: Camera States
-description: Store States for Peers
+description: Camera Store States for Client
 ---
 
 # Camera States
 
-If you need to access the `MediaStream` of the client. These values are exposed in the store for the client.
+If you need to access the `MediaStream` or `CamStream` of the client. These values are exposed in the store for the client.
 
 > **NOTE:** Camera stream for the client is available directly on the store but for the all the peers there streams are available in the `peers` store which needs to be accessed using the `usePeerTrack()` hook.
 
@@ -51,3 +51,5 @@ possible case for this to occur might be if user denied permission to access the
 ### Example
 
 **You can access the camera state using the `useHuddleStore` hook.**
+
+**NEED TO CREATE THAT HOOK NATIVE IN THE SDK**

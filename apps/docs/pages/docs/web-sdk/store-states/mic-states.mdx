@@ -1,6 +1,53 @@
 ---
 title: Mic States
-description: Store States for Peers
+description: Mic Store States for Client
 ---
 
 # Mic States
+
+If you need to access the `micStream` of the client user. These values are exposed as a `micStates` property on the client.
+
+### Mic Store
+
+```typescript
+type IMicSlice = {
+    micState: {
+        stream: MediaStream | null;
+        mediaDevice: MediaDeviceInfo | null;
+        streamError: {
+            type: IMediErrorType;
+            blocked: boolean;
+        } | null;
+        deviceLoading: boolean;
+    };
+    audioDevices: MediaDeviceInfo[]
+}
+```
+
+`stream` - The current stream of the client user.<br />
+`mediaDevice` - The current device that is being used by the client user.<br />
+`streamError` - The current error that is being thrown by the client user's microphone.<br />
+`deviceLoading` - A boolean that is `true` if the client user's microphone is loading and `false` if it is not.<br />
+`audioDevices` - An array of all the audio devices that are available to the client user.<br />
+
+`streamError`
+
+This is the error that is thrown when the stream is not available. The error has two properties `type` and `blocked`.
+possible case for this to occur might be if user denied permission to access the microphone or if the microphone is not available.
+
+> **NOTE:** The `blocked` property is available if any of the error cases occur.
+
+`type` - The type of error that is thrown.<br />
+
+- `NotAllowedError` - The user has denied permission to access the camera.
+- `NotFoundError` - The camera is not available.
+- `NotReadableError` - The camera is already in use.
+- `OverconstrainedError` - The camera is not available.
+- `SecurityError` - The camera is not available.
+- `AbortError` - The camera is not available.
+- `NotSupportedError` - The camera is not available.
+- `TypeError` - The camera is not available.
+
+### Example
+
+**NEED TO CREATE THAT HOOK NATIVE IN THE SDK**
