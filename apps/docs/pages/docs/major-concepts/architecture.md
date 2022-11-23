@@ -1,5 +1,10 @@
 ## Huddle01 Architecture
 
+Huddle01 uses WebRTC protocol for real-time communication. Since WebRTC is not optimized and requires a media server to scale, we built our own customized SFU solution to tackle the scalability issue. 
+
+Huddle01 uses a microservice based architecture assisted with serverless functions. We have load balancer, simulcast, LastN, codecs, multithreading, and SFU cascading to handle users at scale. Live-streaming, Recording, Storage over IPFS/Filecoin, Authentication and Authorization, Databases are each maintained by a dedicated microservice.
+
+
 <br />
 <img src="/images/docs/huddle01-arch.png" alt="drawing" width="100%"/>
 <br />

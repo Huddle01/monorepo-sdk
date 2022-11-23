@@ -4,6 +4,9 @@ sidebar_position: 4
 
 # Types
 
+<font color='red'> Remove page</font>
+
+
 ## TWalletData
 
 | Attribute | Type   | Required                                  |

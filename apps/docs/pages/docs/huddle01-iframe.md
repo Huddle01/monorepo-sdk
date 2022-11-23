@@ -4,9 +4,13 @@ title: Huddle01 Iframe
 
 # Huddle01 Iframe
 
+<font color='red'> Add a few lines here on how iFrame lets you embed Huddle01 on your app </font>
+
 > **_NOTE:_** Request for access to the Iframe pkg on Huddle01's discord or reach out to the team.
 
 ## Quick Start
+
+You must have the latest version of `Nodejs` installed on your machine. You can download the latest version of `Nodejs` from [here](https://nodejs.org/en/download/).
 
 Install the `huddle01-iframe` pkg from **_npm_** or **_yarn_**
 
@@ -20,14 +24,14 @@ yarn add @huddle01/huddle01-iframe
 
 ## **Huddle App Setup**
 
-_import_ `<HuddleIframe />` from the **_npm_** pkg
+_import_ `<HuddleIframe />` from the **_npm_** pkg <font color='red'> Specify file name</font>
 
 ```jsx
 // HuddleIframe to be imported
 import { HuddleIframe } from "@huddle01/huddle01-iframe";
 ```
 
-Create a config object as follows:
+Create a config object as follows: <font color='red'> Specify file name</font>
 
 ```jsx
 // JavaScript
@@ -52,7 +56,7 @@ const iframeConfig: IframeConfig = {
 };
 ```
 
-Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component
+Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component <font color='red'> Specify file name</font>
 
 ```jsx
 // JavaScript | TypeScript
@@ -62,6 +66,8 @@ Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component
 ---
 
 ## Instance Methods
+
+<font color='red'> 2 lines on instance methods and their usage</font>
 
 **Usage:**
 

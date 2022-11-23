@@ -1,23 +1,26 @@
 ---
-title: Add To Existing Project
+title: Add to Existing Project
 description: How to add huddle01 to an existing project
 ---
 
-# Add Huddle01 To Existing Project
+# Add Huddle01 to an Existing Project
 
 ---
 
-Huddle01 can be easily integrated to any existing project to leverage the infrastructure of the Huddle01 platform. This guide will walk you through the steps to add Huddle01 to an existing project.
-We provide you with client functions to build a robust and secure connection to the Huddle01 platform. The client functions are available in the [client-methods](/huddle01-client) package.
+Huddle01 can be easily integrated to any existing project to leverage the infrastructure of the Huddle01 platform. This guide will walk you through the steps to add Huddle01 to your application.
+We provide you with client functions to build a robust and secure connection to the Huddle01 platform. The client functions are available in the [client-methods](/docs/web-sdk/methods) package.
 
 ## Prerequisites
 
-> **NOTE** You must have an **API Key** to access the Huddle01 Infrastructure.
-> You can get an **API Key** by signing up for a free account at [API KEY](https://huddle01.com)
+You must have an **API Key** to access the Huddle01 Infrastructure.
+> <font color='red'> You can get an **API Key** by signing up for a free account at [API KEY](https://huddle01.com)</font>
 
-## Dependencies
+[Get your API Key](/docs/web-sdk/api-key)
 
 You must have the latest version of `Nodejs` installed on your machine. You can download the latest version of `Nodejs` from [here](https://nodejs.org/en/download/).
+
+
+## Dependencies
 
 Install the `huddle01-client` package using the following command:
 
@@ -31,13 +34,15 @@ yarn add @huddle01/huddle01-client
 ## Usage
 
 The `huddleClient` is the root class of the SDK. It is used to initialize and to access all the fetaures of the SDK.
-To initialize the HuddleClient `getHuddleClient` function provide inside the module:
+<font color='red'>To initialize the HuddleClient `getHuddleClient` function provide inside the module:</font>
+
+Replace *Your-API-Key* with the key generated [here](/docs/web-sdk/api-key)
 
 ```jsx
 //src/App.tsx
 import { getHuddleClient } from '@huddle01/huddle01-client';
 
-const huddleClient = getHuddleClient('<Your-API-Key>');
+const huddleClient = getHuddleClient('Your-API-Key');
 ```
 
 > **Note:** The `HuddleClient` is a singleton class. So you should only have one instance of it in your project.
@@ -69,12 +74,12 @@ const App = () => {
 > It should wrap all the other components in your project. You can use the `HuddleClientProvider` in any component in your project.
 > But it is recommended to use it in the root component of your project.
 
-And that's it. You have successfully integrated the Huddle01 SDK to your project.
+And that's it! You have successfully integrated the Huddle01 SDK to your project.
 
 ## Using the HuddleClient
 
 As mentioned above, the `HuddleClient` is the root class of the SDK. It exposes many methods to access the features of the SDK.
-for example to join a room. You can use the `join` method of the `HuddleClient` class.
+For example, to join a room you can use the `join` method of the `HuddleClient` class.
 
 ```jsx
 huddleClient.join('roomId');
@@ -84,4 +89,4 @@ huddleClient.join('roomId');
 
 Now that you have successfully integrated the Huddle01 SDK to your project, you can start using the SDK to build your own features.
 
-Check out the [Client Methods](/getting-started) guide to learn more about how to invoke different `HuddleClient` methods to build your own features.
+Check out the [Client Methods](/docs/web-sdk/methods) guide to learn more about how to invoke different `HuddleClient` methods to build your own features.

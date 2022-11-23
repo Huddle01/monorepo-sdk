@@ -1,5 +1,7 @@
 ## Core Primitives
 
+Huddle01 has only the following core constructs: a room, a peer, a mediastream and mediastream track. 
+
 ## Room
 
 A `Room` represents a Huddle01 meeting session. It is a container for all the participants and the media streams.

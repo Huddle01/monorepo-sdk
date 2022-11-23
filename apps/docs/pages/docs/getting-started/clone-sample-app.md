@@ -15,7 +15,7 @@ Name your project
 <img src="/images/cli-tool/project-name.png" alt="drawing" width="30%"/>
 <br />
 
-Select your preferred tool and click enter
+Select your preferred tool and click enter (iframe or client)
 <br />
 <img src="/images/cli-tool/which-tool.png" alt="drawing" width="30%"/>
 <br />
@@ -25,12 +25,24 @@ Confirm whether you want to use typescript
 <img src="/images/cli-tool/tsornot.png" alt="drawing" width="30%"/>
 <br />
 
-The sample app is now cloned to your local system
+The sample app is now cloned to your local system! 
 <br />
 <img src="/images/cli-tool/cd-app.png" alt="drawing" width="30%"/>
 <br />
 
-The project directory looks as follows
+Run the following command to change directory
+<br />
+```bash
+cd name-of-the-app
+```
+**The project directory looks as follows:**
+
+iFrame:
+<br />
+<img src="/images/cli-tool/dir-ssiFrame.png" alt="drawing" width="20%"/>
+
+
+Client:
 <br />
 <img src="/images/cli-tool/dir-ss.png" alt="drawing" width="20%"/>
 
@@ -45,7 +57,7 @@ yarn
 ```bash
 yarn dev
 ```
-Open your browser and check out the sample app
+**Open your browser and check out the sample app**
 
 iFrame:
 <br />
