@@ -1,7 +1,7 @@
 # Sample Applications
 
 ## iFrame SDK Examples
- 
+
 **[Orbits Live](https://huddle01.orbits.live/v2/)**
 
  <br />
@@ -15,14 +15,15 @@
 
 ## Client SDK Examples
 
-<font color='red'>Demo App 1</font>
+ <br />
+
+<font color='red'>Cool Conferencing app</font>
 
  <br />
 <img src="/images/docs/axit_demo_client.png" alt="drawing" width="100%"/>
 <br />
 
-<font color='red'>**Demo App 2**</font>
+<font color='red'>**Buddle01 - Chess App**</font>
 <br />
 <img src="/images/docs/anjana_demo_client.png" alt="drawing" width="100%"/>
 <br />
-
