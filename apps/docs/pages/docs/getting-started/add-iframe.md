@@ -4,8 +4,7 @@ title: Huddle01 Iframe
 
 # Add Huddle01 Iframe
 
-
-<font color='red'> Add a few lines here on how iFrame lets you embed Huddle01 on your app </font>
+Huddle01 IFrame lets you embed Huddle01's Web App in your website with a few lines of code
 
 > **_NOTE:_** Request for access to the Iframe pkg on Huddle01's discord or reach out to the team.
 
@@ -23,9 +22,7 @@ npm i @huddle01/huddle01-iframe
 yarn add @huddle01/huddle01-iframe
 ```
 
-## **Huddle App Setup** 
-
-
+## **Huddle App Setup**
 
 _import_ `<HuddleIframe />` from the **_npm_** pkg <font color='red'> Specify file name</font>
 
@@ -65,5 +62,5 @@ Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component <fo
 // JavaScript | TypeScript
 <HuddleIframe config={iframeConfig} />
 ```
-<font color='red'> Add closing lines and next steps similar to the one in Add to Existing Project</font>
 
+<font color='red'> Add closing lines and next steps similar to the one in Add to Existing Project</font>

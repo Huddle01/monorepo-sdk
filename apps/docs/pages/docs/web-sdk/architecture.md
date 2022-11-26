@@ -2,16 +2,13 @@
 
 <font color='red'>Few lines explaining basic arch of Web SDK</font>
 
-
 ## Architecture Overview
 
-<font color='red'>image here</font>
+<img src="/images/docs/client-sdk-arch.png" alt="drawing" width="100%"/>
 
-## Store management.
+## [Store management.](store-states/room-states)
 
 Our React App is wrapped around its own custom zustand store, which handles all the peer data.
-
-<font color='red'>(Link to Store Management)</font>
 
 ## HuddleClientContext
 

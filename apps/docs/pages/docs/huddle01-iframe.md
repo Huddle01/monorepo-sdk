@@ -4,7 +4,7 @@ title: Huddle01 Iframe
 
 # Huddle01 Iframe
 
-<font color='red'> Add a few lines here on how iFrame lets you embed Huddle01 on your app </font>
+Huddle01 IFrame lets you embed Huddle01's Web App in your website with a few lines of code
 
 > **_NOTE:_** Request for access to the Iframe pkg on Huddle01's discord or reach out to the team.
 
