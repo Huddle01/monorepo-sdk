@@ -6,8 +6,6 @@ sidebar_position: 3
 
 ## `useMeCamTrack`
 
-### Description
-
 Hook to access the camera track of the current user
 <br/>
 <font size="4"> **Return Type : `Promise<MediaTrack>`** </font>
@@ -22,8 +20,6 @@ const myCam = useMeCamTrack();
 ```
 
 ## `useMeMicTrack`
-
-### Description
 
 Hook to access the mic track of the current user
 <br/>
@@ -41,8 +37,6 @@ const myMic = useMeMicTrack();
 
 ## `useMeShareTrack`
 
-### Description
-
 Hook to access the screen share video track of the current user
 <br/>
 
@@ -58,8 +52,6 @@ const shareVideoTrack = useMeShareTrack();
 ```
 
 ## `useMeShareAudioTrack`
-
-### Description
 
 Hook to access the screen share audio track of the current user
 <br/>

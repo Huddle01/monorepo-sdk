@@ -6,8 +6,6 @@ sidebar_position: 3
 
 ## `usePeersData`
 
-### Description
-
 Hook to access all peer data
 <br/>
 <font size="4"> **Return Type : `Peers[]`** </font>
@@ -22,8 +20,6 @@ const peers = usePeersData();
 ```
 
 ## `usePeerCamTrack`
-
-### Description
 
 Hook to access the camera track of the selected peer
 <br/>
@@ -45,8 +41,6 @@ const peerCam = usePeerCamTrack(peerId);
 ```
 
 ## `usePeerMicTrack`
-
-### Description
 
 Hook to access the mic track of the selected peer
 
@@ -70,8 +64,6 @@ const myMic = usePeerMicTrack(peerId);
 
 ## `usePeerShareTrack`
 
-### Description
-
 Hook to access the screen share video track of the selected peer
 
 <font size="4"> **Return Type : `Promise<MediaTrack>`** </font>
@@ -93,8 +85,6 @@ const shareVideoTrack = usePeerShareTrack(peerId);
 ```
 
 ## `usePeerShareAudioTrack`
-
-### Description
 
 Hook to access the screen share audio track of the selected peer
 

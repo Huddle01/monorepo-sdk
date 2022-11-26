@@ -39,8 +39,6 @@ const apiKey = "replace-with-your-api-key";
 const huddleClient = getHuddleClient(apiKey);
 ```
 
-<font color='red'> Add the 2 pending hooks </font>
-
 ---
 
 💡 For any help reach out to us on
