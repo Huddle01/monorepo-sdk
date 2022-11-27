@@ -4,3 +4,105 @@ description: Store States for Peers
 ---
 
 # Chat Store States
+
+Chat Feature is also provided in the SDK natively, we also support feature like file sharing join and leave notification etc. Files are stored on IPFS.
+
+> **NOTE:** Files are stored while you are the meeting also if a new user joins the meeting they are not able to see the previous messages.
+
+### Store States
+
+```typescript
+type IChatStoreType {
+  unread: {
+    [chatRoomId: string]: number;
+  };
+  chat: {
+    [chatRoomId: string]: IChatMessage[];
+  };
+  reactions: {
+    [peerId: string]: string;
+  };
+  sharedFilesArr: Array<TSharedFile>;
+  notificationSounds: TNotifSounds;
+  chatNotif: boolean;
+  peerJoinNotif: boolean;
+  peerLeaveNotif: boolean;
+}
+
+export type IChatMessage = {
+  id: string;
+  peerId: string;
+  displayName?: string;
+  type: IChatType;
+  message?: string;
+  timestamp?: string;
+  error?: {
+    type?: IMediErrorType;
+    isError: boolean;
+  };
+};
+
+export type TSharedFile = {
+  fileName: string;
+  fileSize: number;
+  ipfsHash: string;
+  sharedByPeer: string;
+};
+
+export type TNotifSounds = 'chat' | 'peerJoin' | 'peerLeave' | '';
+```
+
+- `unread` - Unread messages count for each chat room.
+- `chat` - Chat messages for each chat room.
+- `reactions` - Reactions for each peer.
+- `sharedFilesArr` - Array of shared files.
+- `notificationSounds` - Notification sounds for chat, peer join and peer leave.
+- `chatNotif` - Chat notification.
+- `peerJoinNotif` - Peer join notification.
+- `peerLeaveNotif` - Peer leave notification.
+
+`IChatMessage`
+
+- `id` - Unique id for each message.
+- `peerId` - Peer id of the user who sent the message.
+- `displayName` - Display name of the user who sent the message.
+- `type` - Type of the message.
+- `message` - Message.
+- `timestamp` - Timestamp of the message.
+- `error` - Error object.
+
+`TSharedFile`
+
+- `fileName` - Name of the file.
+- `fileSize` - Size of the file.
+- `ipfsHash` - IPFS hash of the file.
+- `sharedByPeer` - Peer id of the user who shared the file.
+
+### Example
+
+```tsx
+import { useHuddleStore } from "huddle01-client/hooks";
+
+interface Props {
+    peerId: string;
+}
+
+const Component = ({ peerId }) => {
+    const roomChats = useRootStore((state) => state.chat[peerId]);
+
+    return (
+        <div>
+            {roomChats.map((chat) => (
+                <div key={chat.id}>
+                    <span>{chat.displayName}</span>
+                    <span>{chat.message}</span>
+                </div>
+            ))}
+            ...
+        <div />
+    )
+}
+```
+
+> **NOTE:** Doing this will subscribe `roomChats` state to that component and will re-render the component when the state changes. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.

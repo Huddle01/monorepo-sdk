@@ -4,5 +4,59 @@ description: Store States for Peers
 ---
 
 # Network States
-<font color='red'> Content pending</font>
 
+You are provided with the NetworkStats of all the peers in the room. The data is stored with last_updated timestamp, with NetworkStats of peerId mapped with the quality of the Network.
+
+### Store States
+
+```typescript
+type INetworkState {
+  networkStats: TNetStats;
+  bandwidthSaver: boolean;
+}
+
+type TNetStats = {
+  last_updated: number;
+  data: {
+    [peerId: string]: number; // stores value from 1 to 4 , 1 indicates poor netwrk, 4 indicates good network
+  };
+};
+```
+
+- `networkStats` - This is the object that stores the network stats of all the peers in the room. The data is stored with last_updated timestamp, with NetworkStats of peerId mapped with the quality of the Network.
+- `bandwidthSaver` - This is a boolean value that indicates whether the bandwidth saver mode is enabled or not.
+
+> **Note: ** Network quality is calculated based on the following parameters:
+>
+> - Packet loss
+> - Round trip time
+> - Jitter
+> - Bandwidth
+> - CPU load
+> - Network type, etc.
+
+### Example
+
+You can access the room state using the `useHuddleStore` hook.
+
+```tsx
+import { useHuddleStore } from "huddle01-client/hooks";
+
+interface Props {
+    peerId: string;
+}
+
+const Component = ({ peerId }) => {
+      const networkStat = useHuddleStore((state) => state.networkStats.data[peerId]);
+
+    return (
+        <div>
+            {networkStat === 4 && <div>Awesome</div>}
+            ...
+        <div />
+    )
+}
+```
+
+> **NOTE:** Doing this will subscribe `networkStat` state to that component and will re-render the component when the state changes. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.

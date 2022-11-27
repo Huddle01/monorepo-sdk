@@ -4,4 +4,72 @@ description: Store States for Peers
 ---
 
 # Host Controls States
-<font color='red'> Content pending</font>
+
+### Store States
+
+```tsx
+type IHostControlsStoreType {
+  hostId: string | null;
+  hostState: IHostState;
+  meId: string;
+  coHosts: string[];
+  hostControl: THostControls;
+}
+
+type THostControls = {
+  allowVideo: boolean;
+  allowAudio: boolean;
+  allowScreenShare: boolean;
+  allowChat: boolean;
+};
+
+export type IHostState = 'host-false' | 'host-true' | 'no-host';
+```
+
+- `hostId` is the id of the host
+- `hostState` is the state of the host
+- `meId` is the id of the current user
+- `coHosts` is an array of co-hosts
+- `hostControl` is an object that contains the host controls
+
+`THostControls`
+
+- `allowVideo` is a boolean that determines if the host allows video
+- `allowAudio` is a boolean that determines if the host allows audio
+- `allowScreenShare` is a boolean that determines if the host allows screen sharing
+- `allowChat` is a boolean that determines if the host allows chat
+
+`IHostState`
+
+- `host-false` is the state when the host is not in the room
+- `host-true` is the state when the host is in the room
+- `no-host` is the state when there is no host in the room
+
+### Example
+
+**You can access the room state using the `useHuddleStore` hook.**
+
+To access the data of each peer in the room, you must have access to the `peerId` of that peer.
+
+```jsx
+import { useHuddleStore } from "huddle01-client/hooks";
+
+interface Props {
+    peerId: string;
+}
+
+const Component = ({ peerId }) => {
+    const hostId = useHuddleStore(state => state.hostId);
+
+    return (
+        <div>
+            {isCamPaused === peerId ? "Host" : "Not Host"}
+            ...
+        <div />
+    )
+}
+
+```
+
+> **NOTE: Doing this will subscribe `hostId` state to that component and will re-render the component when the state changes**. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.

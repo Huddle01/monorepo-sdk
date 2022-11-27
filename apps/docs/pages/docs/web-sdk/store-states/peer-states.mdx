@@ -46,7 +46,7 @@ interface Props {
     peerId: string;
 }
 
-const PeerComponent = ({ peerId }) => {
+const Component = ({ peerId }) => {
     const isCamPaused = useHuddleStore(state => state.peers[peerId].isCamPaused);
 
     return (
