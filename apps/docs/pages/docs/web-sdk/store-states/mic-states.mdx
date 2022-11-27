@@ -50,4 +50,64 @@ possible case for this to occur might be if user denied permission to access the
 
 ### Example
 
-<font color='red'>**NEED TO CREATE THAT HOOK NATIVE IN THE SDK**</font>
+### Example
+
+**You can access the camera state using the `useMeCamTrack` hook.**
+
+```jsx
+import { useHuddleStore, useMeCamTrack } from "huddle01-client/hooks";
+
+interface Props {
+    peerId: string;
+}
+
+const Component = ({ peerId }) => {
+    const audioElem = useRef<HTMLAudioElement>(null);
+    const isMicPaused = useHuddleStore(state => state.isMicPaused);
+    const deviceId = useRootStore(state => state.activeSpeaker?.deviceId);
+    const myMicTrack = useMeMicTrack(peerId);
+
+    const getStream = (_track: MediaStreamTrack) => {
+        const stream = new MediaStream();
+        stream.addTrack(_track);
+        return stream;
+    };
+
+    useEffect(() => {
+            const audioRef = audioElem.current;
+
+            if (myMicTrack && audioRef) {
+            audioRef.load();
+            audioRef.srcObject = getStream(myMicTrack);
+            }
+
+            if (audioElement && typeof deviceId === 'string') {
+                audioElement.setSinkId(deviceId);
+            }
+
+            return () => {
+            if (audioRef) {
+                audioRef.srcObject = null;
+            }
+        };
+    }, [audioElement, deviceId, myMicTrack]);
+
+    return (
+        <div>
+            {isMicPaused ? "Paused" : "Not Paused"}
+            {isMicPaused ?  <audio
+                id="peerAudio"
+                autoPlay
+                playsInline
+                controls={false}
+                ref={audioElem}
+            /> : null}
+            ...
+        <div />
+    )
+}
+
+```
+
+> **NOTE: Doing this will subscribe `isCamPaused`, `myCamStream` state to that component and will re-render the component when the state changes**. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.

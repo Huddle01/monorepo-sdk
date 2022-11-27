@@ -50,6 +50,71 @@ possible case for this to occur might be if user denied permission to access the
 
 ### Example
 
-**You can access the camera state using the `useHuddleStore` hook.**
+**You can access the camera state using the `useMeCamTrack` hook.**
 
-<font color='red'>**NEED TO CREATE THAT HOOK NATIVE IN THE SDK**</font>
+```jsx
+import { useHuddleStore, useMeCamTrack } from "huddle01-client/hooks";
+
+interface Props {
+    peerId: string;
+}
+
+const Component = ({ peerId }) => {
+    const isCamPaused = useHuddleStore(state => state.isCamPaused);
+    const myCamStream = useMeCamTrack(peerId);
+
+    const getStream = (_track: MediaStreamTrack) => {
+        const stream = new MediaStream();
+        stream.addTrack(_track);
+        return stream;
+    };
+
+    useEffect(() => {
+        const videoObj = videoRef.current;
+
+        if (videoObj && myCamStream) {
+        videoObj.load();
+        videoObj.srcObject = getStream(myCamStream);
+        videoObj.play().catch(err => {
+            logger.error({
+            message: 'Error playing video',
+            meta: {
+                err,
+            },
+            });
+        });
+        }
+
+        if (isCamPaused && videoObj) {
+        videoObj.pause();
+        } else if (!isCamPaused && videoObj) {
+        videoObj.play();
+        }
+
+        return () => {
+            if (videoObj) {
+                videoObj?.pause();
+                videoObj.srcObject = null;
+            }
+        };
+    }, [myCamStream, isCamPaused]);
+
+    return (
+        <div>
+            {isCamPaused ? "Paused" : "Not Paused"}
+            {isCamPaused ? <video
+                ref={videoRef}
+                id="peer-video-elem"
+                muted
+                autoPlay
+                playsInline
+            /> : null}
+            ...
+        <div />
+    )
+}
+
+```
+
+> **NOTE: Doing this will subscribe `isCamPaused`, `myCamStream` state to that component and will re-render the component when the state changes**. <br />
+> Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.

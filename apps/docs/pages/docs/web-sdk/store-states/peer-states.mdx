@@ -40,7 +40,7 @@ type IPeerStoreState = {
 To access the data of each peer in the room, you must have access to the `peerId` of that peer.
 
 ```jsx
-import { useHuddleStore } from "huddle01-client/hooks";
+import { useHuddleStore, usePeerCamTrack } from "huddle01-client/hooks";
 
 interface Props {
     peerId: string;
@@ -48,10 +48,54 @@ interface Props {
 
 const Component = ({ peerId }) => {
     const isCamPaused = useHuddleStore(state => state.peers[peerId].isCamPaused);
+    const peerCamTrack = usePeerCamTrack(peerId);
+
+    const getStream = (_track: MediaStreamTrack) => {
+        const stream = new MediaStream();
+        stream.addTrack(_track);
+        return stream;
+    };
+
+    useEffect(() => {
+        const videoObj = videoRef.current;
+
+        if (videoObj && peerCamTrack) {
+        videoObj.load();
+        videoObj.srcObject = getStream(peerCamTrack);
+        videoObj.play().catch(err => {
+            logger.error({
+            message: 'Error playing video',
+            meta: {
+                err,
+            },
+            });
+        });
+        }
+
+        if (isCamPaused && videoObj) {
+        videoObj.pause();
+        } else if (!isCamPaused && videoObj) {
+        videoObj.play();
+        }
+
+        return () => {
+            if (videoObj) {
+                videoObj?.pause();
+                videoObj.srcObject = null;
+            }
+        };
+    }, [peerCamTrack, isCamPaused]);
 
     return (
         <div>
             {isCamPaused ? "Paused" : "Not Paused"}
+            {isCamPaused ? <video
+                ref={videoRef}
+                id="peer-video-elem"
+                muted
+                autoPlay
+                playsInline
+            /> : null}
             ...
         <div />
     )
@@ -59,5 +103,5 @@ const Component = ({ peerId }) => {
 
 ```
 
-> **NOTE: Doing this will subscribe `isCamPaused` state to that component and will re-render the component when the state changes**. <br />
+> **NOTE: Doing this will subscribe `isCamPaused` and Peer Camera Track state to that component and will re-render the component when the state changes**. <br />
 > Pro Tip: You dont need to add useEffect to subscribe to the state and change certains states based on this, it is already done for you.
