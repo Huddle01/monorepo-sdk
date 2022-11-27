@@ -28,7 +28,8 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "2.1.1",
     "swr": "1.0.1",
-    "wagmi": "^0.8.5"
+    "wagmi": "^0.8.5",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@babel/core": "7.18.13",
