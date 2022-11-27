@@ -14,6 +14,11 @@ module.exports = withNextra({
   async redirects() {
     return [
       {
+        source: "/",
+        destination: "/docs/introduction/huddle01",
+        permanent: true,
+      },
+      {
         source: "/usage",
         destination: "/reference/command-line-reference",
         permanent: true,
