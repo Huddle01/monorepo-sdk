@@ -60,11 +60,10 @@ Hook to access the screen share audio track of the current user
 
 ```jsx
 // JavaScript | TypeScript
-import { useMeShareTrack } from "huddle01-client/hooks";
+import { useMeShareAudioTrack } from "huddle01-client/hooks";
 
 // Example
-const shareAudioTrack = useMeShareTrack();
-
+const shareAudioTrack = useMeShareAudioTrack();
 ```
 
 💡 For any help reach out to us on
