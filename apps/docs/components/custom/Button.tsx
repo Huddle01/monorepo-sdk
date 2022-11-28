@@ -22,7 +22,7 @@ const Button = () => {
     }
     (async () => {
       try {
-        const getApiKeyResp = await axios("/api/auth/get-key", {
+        const getApiKeyResp = await axios("/docs/api/auth/get-key", {
           method: "POST",
           data: {
             address,
@@ -39,7 +39,7 @@ const Button = () => {
           setApiKey(apiKey);
         } else if (!getApiKeyData.created) {
           // do something
-          const resp = await axios("/api/auth/create-api", {
+          const resp = await axios("/docs/api/auth/create-api", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
