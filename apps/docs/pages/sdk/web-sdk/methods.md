@@ -15,10 +15,24 @@ All other HuddleClient functions are only available after the `join()` method is
 <br /><br />
 <font size="4"> Params </font>
 
-| Param      | Type                               | Required                            |
-| ---------- | ---------------------------------- | ----------------------------------- |
-| roomId     | string                             | <font color="red">`required`</font> |
-| walletData | [`TWalletData`](types#twalletdata) | <font color="red">`required`</font> |
+| Param      | Type        | Required                            |
+| ---------- | ----------- | ----------------------------------- |
+| roomId     | string      | <font color="red">`required`</font> |
+| walletData | TWalletData | <font color="red">`required`</font> |
+
+`TWalletData`
+
+```typescript
+type TWalletData = {
+  address: string;
+  wallet: string; // metamask, walletConnect etc.
+  ens: string;
+};
+```
+
+- `address` Wallet Address of the user joined
+- `wallet` Type of Wallet Used.
+- `ens` ENS name used.
 
 > NOTE: `roomID` is the unique identifier of the room to be joined, while joining more than one peer to the room make sure to use the same roomID.
 >
