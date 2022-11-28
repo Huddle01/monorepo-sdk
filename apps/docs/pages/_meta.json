@@ -12,13 +12,7 @@
       "toc": true
     }
   },
-  "docs": "Docs",
-  "blog": {
-    "title": "Blog",
-    "theme": {
-      "typesetting": "article"
-    }
-  },
+  "sdk": "Docs",
   "showcase": {
     "title": "Showcase",
     "type": "page",

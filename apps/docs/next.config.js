@@ -6,6 +6,7 @@ const withNextra = require("nextra")({
 });
 
 module.exports = withNextra({
+  basePath: "/docs",
   reactStrictMode: true,
   experimental: {
     legacyBrowsers: false,
@@ -15,37 +16,38 @@ module.exports = withNextra({
     return [
       {
         source: "/",
-        destination: "/docs/introduction/huddle01",
-        permanent: true,
+        destination: "/docs/sdk/introduction/huddle01",
+        permanent: false,
+        basePath: false,
       },
       {
         source: "/usage",
         destination: "/reference/command-line-reference",
-        permanent: true,
+        permanent: false,
       },
       {
         source: "/discord{/}?",
-        permanent: true,
+        permanent: false,
         destination: "https://discord.gg/sSzyjxvbf5",
       },
       {
         source: "/docs/changelog",
-        permanent: true,
+        permanent: false,
         destination: "https://github.com/vercel/turborepo/releases",
       },
       {
         source: "/docs/guides/complimentary-tools",
-        permanent: true,
+        permanent: false,
         destination: "/docs/guides/monorepo-tools",
       },
       {
         source: "/docs/guides/continuous-integration",
-        permanent: true,
+        permanent: false,
         destination: "/docs/ci",
       },
       {
         source: "/docs/features/:path*",
-        permanent: true,
+        permanent: false,
         destination: "/docs/core-concepts/:path*",
       },
     ];

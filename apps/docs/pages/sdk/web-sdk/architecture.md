@@ -14,4 +14,4 @@ Provider is necessary to initalise the `HuddleClient` Class which exposes all th
 
 ## Architecture Overview
 
-<img src="/images/docs/client-sdk-arch.png" alt="drawing" width="100%"/>
+<img src="/docs/images/docs/client-sdk-arch.png" alt="drawing" width="100%"/>
