@@ -17,3 +17,9 @@
     >You can implement your own wallet authentication in your app and then use the `connectWallet()` method in the IframeSDK to connect using that auth logic.
 3. Can I modify the UI for my Iframe App ?
     >Yes, you can contact the Huddle01 team for customization, self-customization is still in the works!
+
+<br />
+
+-----------------------------
+💡 For any further help reach out to us on
+[Discord](https://discord.com/invite/EYqfS32jYc)

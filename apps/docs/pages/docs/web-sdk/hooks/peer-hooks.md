@@ -43,10 +43,11 @@ const peerCam = usePeerCamTrack(peerId);
 ## `usePeerMicTrack`
 
 Hook to access the mic track of the selected peer
+<br />
 
 <font size="4"> **Return Type : `Promise<MediaTrack>`** </font>
 
-**Params**
+**Params:**
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |
@@ -66,9 +67,11 @@ const myMic = usePeerMicTrack(peerId);
 
 Hook to access the screen share video track of the selected peer
 
+<br />
+
 <font size="4"> **Return Type : `Promise<MediaTrack>`** </font>
 
-**Params**
+**Params:**
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |
@@ -88,9 +91,10 @@ const shareVideoTrack = usePeerShareTrack(peerId);
 
 Hook to access the screen share audio track of the selected peer
 
+<br />
 <font size="4"> **Return Type : `Promise<MediaTrack>`** </font>
 
-**Params**
+**Params:**
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |

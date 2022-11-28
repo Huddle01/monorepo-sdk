@@ -7,8 +7,8 @@ description: How to add huddle01 to an existing project
 
 ---
 
-Huddle01 can be easily integrated to any existing project to leverage the infrastructure of the Huddle01 platform. This guide will walk you through the steps to add Huddle01 to your application.
-We provide you with client functions to build a robust and secure connection to the Huddle01 platform. The client functions are available in the [client-methods](/docs/web-sdk/methods) package.
+Huddle01 can be easily integrated to any existing project to leverage the infrastructure of our platform. This guide will walk you through the steps to add Huddle01 to your application.
+We provide you with client functions to build a robust and secure connection to the Huddle01 platform. The client functions are available in the [client-methods](/docs/web-sdk/methods) section.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ import { getHuddleClient } from '@huddle01/huddle01-client';
 const huddleClient = getHuddleClient('Your-API-Key');
 ```
 
-> **Note:** The `HuddleClient` is a singleton class. So you should only have one instance of it in your project.
+> **Note:** The `HuddleClient` is a singleton class so you should only have one instance of it in your project.
 > If you want to use the `HuddleClient` in multiple places in your project, you should import it from a single file.
 > This will ensure that you are using the same instance of the `HuddleClient` everywhere.
 
@@ -70,13 +70,13 @@ const App = () => {
 
 > **Note:** The `HuddleClientProvider` should be the root component of your project.
 > It should wrap all the other components in your project. You can use the `HuddleClientProvider` in any component in your project.
-> But it is recommended to use it in the root component of your project.
+> But it is recommended that you use it in the root component of your project.
 
 And that's it! You have successfully integrated the Huddle01 SDK to your project.
 
 ## Using the HuddleClient
 
-As mentioned above, the `HuddleClient` is the root class of the SDK. It exposes many methods to access the features of the SDK.
+As mentioned above, the `HuddleClient` is the root class of the SDK. It exposes several methods to access the features of the SDK.
 For example, to join a room you can use the `join` method of the `HuddleClient` class.
 
 ```jsx
@@ -87,4 +87,4 @@ huddleClient.join('roomId');
 
 Now that you have successfully integrated the Huddle01 SDK to your project, you can start using the SDK to build your own features.
 
-Check out the [Client Methods](/docs/web-sdk/methods) guide to learn more about how to invoke different `HuddleClient` methods to build your own features.
+Check out [Client Methods](/docs/web-sdk/methods) to learn more about how to invoke different `HuddleClient` methods to build your own features.

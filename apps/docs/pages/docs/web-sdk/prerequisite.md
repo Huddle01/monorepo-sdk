@@ -2,7 +2,7 @@
 
 ## Installing Node.js
 
-To use the client sdk you must have Node.js installed on your machine.
+To use the Client SDK, you must have Node.js installed on your machine.
 
 - Install Node.js [with NVM](https://github.com/nvm-sh/nvm)
 - Install Node.js [with FNM](https://github.com/Schniz/fnm)
