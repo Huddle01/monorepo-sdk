@@ -6,8 +6,6 @@ sidebar_position: 3
 
 ## `useHuddleStore`
 
-### Description
-
 Hook to access HuddleStore states, mutation and accessor methods
 
 ```jsx

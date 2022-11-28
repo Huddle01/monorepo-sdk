@@ -24,6 +24,6 @@ The Huddle01 Mediaserver is our in-house SFU implementation written in C++ bridg
 
 A containerised microservice is responsible for recording and livestreaming meetings , written in Golang using Gstreamer.
 
-- It handles streaming to streaming services like Youtube, Twitch, etc
-- It handles recording to local storage and cloud storage like AWS S3, IPFS and Filecoin
-- It handles multistreaming by forwarding the stream to a Livepeer node , Livepeer allows for streaming to multiple platforms at the same time.
+- It handles streaming to streaming services such as Youtube, Twitch, etc
+- It handles recording to local storage and cloud storage such as AWS S3, IPFS and Filecoin
+- It handles multistreaming by forwarding the stream to a Livepeer node. Livepeer allows for streaming to multiple platforms at the same time.

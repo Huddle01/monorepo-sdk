@@ -5,7 +5,7 @@ description: Mic Store States for Client
 
 # Mic States
 
-If you need to access the `micStream` of the client user. These values are exposed as a `micStates` property on the client.
+Lets you access the `micStream` of the client user. These values are exposed as a `micStates` property on the client.
 
 ### Mic Store
 
@@ -32,7 +32,7 @@ type IMicSlice = {
 
 `streamError`
 
-This is the error that is thrown when the stream is not available. The error has two properties `type` and `blocked`.
+This is the error that is thrown when the stream is not available. The error has two properties, `type` and `blocked`.
 possible case for this to occur might be if user denied permission to access the microphone or if the microphone is not available.
 
 > **NOTE:** The `blocked` property is available if any of the error cases occur.

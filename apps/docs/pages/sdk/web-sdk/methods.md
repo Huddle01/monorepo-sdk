@@ -51,9 +51,6 @@ huddleClient.enableWebcam();
 
 ## <font color="yellow">async</font> `disableWebcam()`
 
-<br />
-<font size="5"> **Description** </font>
-
 `disableWebcam()` to disable the webcam of the user.
 
 <br />
@@ -89,7 +86,7 @@ To fetch the list of available webcams use `getWebcams()` which returns `MediaDe
 <font size="5"> **Return Type : `Promise<Void>`** </font>
 
 <br />
-<font size="4"> Params </font>
+<font size="4"> **Params:** </font>
 
 | Param       | Type            | Required                                  |
 | ----------- | --------------- | ----------------------------------------- |
@@ -123,8 +120,8 @@ huddleClient.enableMic();
 
 `disableMic()` to disable the microphone of the user.
 
-> Note : This will stop the audio stream from the user's microphone and Mute the user.
-> using `muteMic()` is preffered over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter involves stopping the audio stream from the user's microphone.
+> Note : This will stop the audio stream from the user's microphone and mute the user.
+> Using `muteMic()` is preferred over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter stops the audio stream from the user's microphone.
 
 <br />
 <font size="5"> **Return Type : `Promise<Void>`** </font>
@@ -156,7 +153,7 @@ const micList = huddleClient.getMics();
 To fetch the list of available microphones use `getMics()` which returns `MediaDeviceInfo[]`.
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param       | Type            | Required                                  |
 | ----------- | --------------- | ----------------------------------------- |
@@ -175,8 +172,8 @@ await huddleClient.changeMic(micList[0]);
 
 `muteMic()` to mute the microphone of the user.
 
-> Note : This will stop the audio stream from the user's microphone and Mute the user.
-> using `muteMic()` is preffered over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter involves stopping the audio stream from the user's microphone.
+> Note : This will stop the audio stream from the user's microphone and mute the user.
+> Using `muteMic()` is preffered over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter stops the audio stream from the user's microphone.
 > Use `muteMic()` and `unmuteMic()` when you want a quick mute/unmute functionality.
 
 <br />
@@ -197,7 +194,7 @@ await huddleClient.muteMic();
 > Supported Image Formats : PNG, JPG, JPEG, SVG
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param     | Type       | Required                            |
 | --------- | ---------- | ----------------------------------- |
@@ -217,7 +214,7 @@ huddleClient.changeAvatarUrl(
 `sendDM()` to send a direct message to a peer in the same room.
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param   | Type   | Required                            |
 | ------- | ------ | ----------------------------------- |
@@ -241,7 +238,7 @@ await huddleClient.sendDM("Hi! Welcome to Huddle01!", // message string
 ## <font color="yellow">async</font> `toggleRaiseHand()`
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param        | Type    | Required                            |
 | ------------ | ------- | ----------------------------------- |
@@ -259,7 +256,7 @@ huddleClient.changeAvatarUrl(
 ## <font color="yellow">async</font> `sendReaction()`
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param    | Type                                                                                         | Required                            |
 | -------- | -------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -274,10 +271,10 @@ huddleClient.sendReaction("🚀");
 
 ## <font color="yellow">async</font> `allowLobbyPeerToJoinRoom()`
 
-`allowLobbyPeerToJoinRoom()` to allow a peer in Lobby to join the room from the lobby using respective `peerId`.
+`allowLobbyPeerToJoinRoom()` allows a peer in the lobby to join the room using the respective `peerId`.
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |
@@ -292,7 +289,7 @@ huddleClient.allowLobbyPeerToJoinRoom("rDVjHUcf4X"); // allow peer in lobby with
 
 ## <font color="yellow">async</font> `allowAllLobbyPeersToJoinRoom()`
 
-`allowAllLobbyPeersToJoinRoom()` to allow all peers in Lobby to join the room from the lobby.
+`allowAllLobbyPeersToJoinRoom()` to allow all peers in the lobby to join the room.
 
 <br />
 <font size="5"> **Code Snippet:** </font>
@@ -303,10 +300,10 @@ huddleClient.allowAllLobbyPeersToJoinRoom(); // allow all lobby peers in room
 
 ## <font color="yellow">async</font> `disallowLobbyPeerFromJoiningRoom()`
 
-`disallowLobbyPeerFromJoiningRoom()` to disallow a peer in Lobby from joining the room using respective `peerId`.
+`disallowLobbyPeerFromJoiningRoom()` to disallow a peer in the lobby from joining the room using respective `peerId`.
 
 <br />
-<font size="4"> **Params** </font>
+<font size="4"> **Params:** </font>
 
 | Param  | Type   | Required                            |
 | ------ | ------ | ----------------------------------- |
@@ -321,7 +318,7 @@ huddleClient.disallowLobbyPeerFromJoiningRoom("rDVjHUcf4X"); // disallow peer in
 
 ## `disallowAllLobbyPeerFromJoiningRoom()`
 
-`disallowAllLobbyPeerFromJoiningRoom()` to disallow all peers in Lobby from joining the room.
+`disallowAllLobbyPeerFromJoiningRoom()` to disallow all peers in the lobby from joining the room.
 
 <br />
 <font size="5"> **Code Snippet:** </font>

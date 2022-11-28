@@ -5,9 +5,9 @@ description: Camera Store States for Client
 
 # Camera States
 
-If you need to access the `MediaStream` or `CamStream` of the client. These values are exposed in the store for the client.
+Lets you access the `MediaStream` or `CamStream` of the client. These values are exposed in the store for the client.
 
-> **NOTE:** Camera stream for the client is available directly on the store but for the all the peers there streams are available in the `peers` store which needs to be accessed using the `usePeerTrack()` hook.
+> **NOTE:** Camera stream for the client is available directly on the store but for all the peers, their streams are available in the `peers` store, which can accessed using the `usePeerTrack()` hook.
 
 ### Camera Store
 
@@ -32,8 +32,8 @@ type IMediaSlice = {
 
 `streamError`
 
-This is the error that is thrown when the stream is not available. The error has two properties `type` and `blocked`.
-possible case for this to occur might be if user denied permission to access the camera or if the camera is not available.
+This is the error that is thrown when the stream is not available. The error has two properties, `type` and `blocked`.
+This may occur if the user is denied permission to access the camera or if the camera is not available.
 
 > **NOTE:** The `blocked` property is available if any of the error cases occur.
 
