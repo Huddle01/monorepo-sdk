@@ -248,8 +248,8 @@ await huddleClient.sendDM("Hi! Welcome to Huddle01!", // message string
 <font size="5"> **Code Snippet:** </font>
 
 ```jsx
-huddleClient.changeAvatarUrl(
-  "https://openseauserdata.com/files/688ce238dd835db6fd8744b4a0f13eb8.svg"
+huddleClient.toggleRaiseHand(
+  isHandRaised: true
 );
 ```
 

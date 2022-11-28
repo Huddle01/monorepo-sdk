@@ -6,6 +6,7 @@ Our SDK gives you the ability to power your application by leveraging the Huddle
 - Audio/video media exchange
 - NFT as PFP
 - Send and Receive Messages
+- Upload Files on IPFS
 - Record meetings
 - Livestream meetings
 

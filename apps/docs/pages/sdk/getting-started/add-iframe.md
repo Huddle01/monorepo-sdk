@@ -6,7 +6,7 @@ title: Huddle01 Iframe
 
 Huddle01 IFrame lets you embed Huddle01's Web App in your website with a few lines of code
 
-> **_NOTE:_** Request for access to the Iframe pkg on Huddle01's discord or reach out to the team.
+> **_NOTE:_** Request for access to the Iframe package on Huddle01's [discord](https://discord.com/invite/EYqfS32jYc).
 
 ## Quick Start
 
@@ -24,14 +24,14 @@ yarn add @huddle01/huddle01-iframe
 
 ## **Huddle App Setup**
 
-_import_ `<HuddleIframe />` from the **_npm_** pkg <font color='red'> Specify file name</font>
+_import_ `<HuddleIframe />` from the **_npm_** pkg
 
 ```jsx
 // HuddleIframe to be imported
 import { HuddleIframe } from "@huddle01/huddle01-iframe";
 ```
 
-Create a config object as follows: <font color='red'> Specify file name</font>
+Create a config object as follows:
 
 ```jsx
 // JavaScript
@@ -56,11 +56,15 @@ const iframeConfig: IframeConfig = {
 };
 ```
 
-Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component <font color='red'> Specify file name</font>
+Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component
 
 ```jsx
 // JavaScript | TypeScript
 <HuddleIframe config={iframeConfig} />
 ```
 
-<font color='red'> Add closing lines and next steps similar to the one in Add to Existing Project</font>
+## Next Steps
+
+Now that you have successfully integrated the Huddle01 Iframe to your project, you can start using the Iframe to build your own features.
+
+Check out [Instance Methods](/sdk/huddle01-iframe#instance-methods) to learn more about how to invoke different `huddleIframeApp` methods to build your own features.

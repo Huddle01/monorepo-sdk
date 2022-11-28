@@ -28,7 +28,7 @@ module.exports = withNextra({
       {
         source: "/discord{/}?",
         permanent: false,
-        destination: "https://discord.gg/sSzyjxvbf5",
+        destination: "https://discord.com/invite/EYqfS32jYc",
       },
       {
         source: "/docs/changelog",

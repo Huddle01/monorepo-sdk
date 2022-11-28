@@ -6,7 +6,7 @@ title: Huddle01 Iframe
 
 Huddle01 IFrame lets you embed Huddle01's Web App in your website with a few lines of code
 
-> **_NOTE:_** Request for access to the Iframe pkg on Huddle01's discord or reach out to the team.
+> **_NOTE:_** Request for access to the Iframe package on Huddle01's [discord](https://discord.com/invite/EYqfS32jYc) or reach out to the team.
 
 ## Quick Start
 
@@ -24,14 +24,12 @@ yarn add @huddle01/huddle01-iframe
 
 ## **Huddle App Setup**
 
-_import_ `<HuddleIframe />` from the **_npm_** pkg <font color='red'> Specify file name</font>
+_import_ `<HuddleIframe />` from the **_npm_** package
 
 ```jsx
 // HuddleIframe to be imported
 import { HuddleIframe } from "@huddle01/huddle01-iframe";
 ```
-
-Create a config object as follows: <font color='red'> Specify file name</font>
 
 ```jsx
 // JavaScript
@@ -56,7 +54,7 @@ const iframeConfig: IframeConfig = {
 };
 ```
 
-Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component <font color='red'> Specify file name</font>
+Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component
 
 ```jsx
 // JavaScript | TypeScript
@@ -66,8 +64,6 @@ Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component <fo
 ---
 
 ## Instance Methods
-
-<font color='red'> 2 lines on instance methods and their usage</font>
 
 **Usage:**
 

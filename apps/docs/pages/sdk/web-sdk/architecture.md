@@ -1,6 +1,6 @@
 # WebSDK Architecture
 
-The basic layout of the SDK is simple, it has React app at its Core which is wrapped around with its own custom store management. For now we use Zustand due to its Hooks based paradigm as it is more scalable and having one big store keeps things simple. With additional features to have custom functions to handle re-rendering of components.
+The basic layout of the SDK is simple, it has React app at its Core which is wrapped around with its own custom store management. For now we use Zustand due to its Hooks based paradigm as it is more scalable and having one big store keeps things simple. It also comes with features likes having custom functions to handle the re-rendering of the components. To know more about zustand check their [docs](https://github.com/pmndrs/zustand#selecting-multiple-state-slices)
 
 You can leverage the `useHuddleStore` hook to access the store. Read more about [Store States](/docs/web-sdk/store-states/room-states)
 

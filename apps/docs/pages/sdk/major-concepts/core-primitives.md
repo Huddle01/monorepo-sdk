@@ -1,6 +1,6 @@
 ## Core Primitives
 
-Huddle01 has only the following core constructs: a room, a peer, a mediastream and mediastream track. 
+Huddle01 has only the following core constructs.
 
 ## Room
 
@@ -16,7 +16,7 @@ A `Room` represents a Huddle01 meeting session. It is a container for all the pa
 A `Peer` represents a participant in a Huddle01 Room. It is a container for all the media streams of a participant. They are represented by the `displayname` that is provided by the client and the server generated unique id we call `peerId`.
 Every `Peer` is associated with a `Room`
 
->  **Note:**
+> **Note:**
 >
 > `displayname` is not the same as `peerId`, which is the unique id of the user for the server. `displayname` is the name that the user chooses to be called by other users in the room hence more than one user can have the same `displayname` in a room.
 
