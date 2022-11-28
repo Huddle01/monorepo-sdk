@@ -341,6 +341,119 @@ huddleClient.disallowLobbyPeerFromJoiningRoom("rDVjHUcf4X"); // disallow peer in
 huddleClient.disallowAllLobbyPeerFromJoiningRoom();
 ```
 
+## <font color="yellow">async</font> `startRecording()`
+
+We have abstracted out the recording process needed into our own micro service, as its our own service you cannot use the feature on localhost.
+When you invoke this function we initate our service which spins up a bot to go to your link and record that website. After you stop the recording you can find the link inside the recording store states.<br />
+
+Check out [Recording States](/sdk)
+
+| Param     | Type   | Required                                  |
+| --------- | ------ | ----------------------------------------- |
+| address   | string | <font color="lightblue">`optional`</font> |
+| sourceUrl | string | <font color="red">`required`</font>       |
+
+<br />
+<font size="5"> **Code Snippet:** </font>
+
+```jsx
+huddleClient.startRecording({
+  '0xHc6BW8hhYKpz6VUWEcp4dCi',
+  "https://www.youtube.com/watch?v=fmNeDQxJBOU"
+});
+```
+
+> **NOTE:** This will send request to our recording service to start a bot and send the bot to record the given youtube video.
+> The wallet address sent will allow the person with this address to access the recording from [Huddle01 Dashboard](https://dashboard.huddle01.com/)
+
+## <font color="yellow">async</font> `stopRecording()`
+
+Invoking this function stops the recording, if you allow to upload the recording to IPFS we will handle all that for you.
+You can find the recording on [Huddle01 Dashboard](https://dashboard.huddle01.com/)
+
+Check out [Recording States](/sdk)
+
+| Param | Type    | Required                            |
+| ----- | ------- | ----------------------------------- |
+| ipfs  | boolean | <font color="red">`required`</font> |
+
+<br />
+<font size="5"> **Code Snippet:** </font>
+
+```jsx
+huddleClient.stopRecording({
+  ipfs: true
+});
+```
+
+> **NOTE:** The wallet address sent when starting the recording will allow the person with this address to access the recording from [Huddle01 Dashboard](https://dashboard.huddle01.com/)
+
+## <font color="yellow">async</font> `startLiveStreaming()`
+
+The ability to livestream a particular meeting is abstracted in the SDK, We can be livestream on `Youtube`, `Livepeer` & `Twitch`. Right now you cannot mutistream
+
+Check out [Recording States](/sdk)
+
+| Param     | Type                           | Required                                  |
+| --------- | ------------------------------ | ----------------------------------------- |
+| platform  | `yotube`, `livepeer`, `twitch` | <font color="red">`required`</font>       |
+| streamObj | `TLiveStreamObject`            | <font color="lightblue">`optional`</font> |
+| sourceUrl | string                         | <font color="lightblue">`optional`</font> |
+
+```typescript
+type TLiveStreamObject = {
+  streamLink: string;
+  streamKey: string;
+  streamName: string;
+};
+```
+
+<br />
+<font size="5"> **Code Snippet:** </font>
+
+```jsx
+huddleClient.startLiveStreaming({
+  platform: 'youtube',
+  streamObj: {
+    streamLink: '...',
+    streamKey: '...',
+    streamName: '...'
+  }
+});
+```
+
+## <font color="yellow">async</font> `stopLiveStreaming()`
+
+Invoking this function stops the livestreaming, upon doing this the livestreaming states are toggled and using this you can configure your logic
+
+Checkout [Livestreaming States]()
+
+| Param    | Type                           | Required                            |
+| -------- | ------------------------------ | ----------------------------------- |
+| platform | `yotube`, `livepeer`, `twitch` | <font color="red">`required`</font> |
+
+```typescript
+type TLiveStreamObject = {
+  streamLink: string;
+  streamKey: string;
+  streamName: string;
+};
+```
+
+<br />
+<font size="5"> **Code Snippet:** </font>
+
+```jsx
+huddleClient.startLiveStreaming({
+  platform: 'youtube',
+  streamObj: {
+    streamLink: '...',
+    streamKey: '...',
+    streamName: '...'
+  }
+});
+```
+
 ---
 
 💡 For any help reach out to us on
