@@ -5,15 +5,14 @@ import { TNavigationType, TSocialDataType } from "../../types/types";
 
 // Assets
 import FooterIcons from "../assets/FooterIcons";
-import externalLinks from '../../helpers/externalLinks'
+import externalLinks from "../../helpers/externalLinks";
 
 const { twitter, insta, linkedin, youTube } = FooterIcons;
-
 
 export const NavigationData: TNavigationType = {
   solutions: [
     { id: 1, name: "Documentation", href: "/docs" },
-    { id: 2, name: "API Reference", href: "/docs" },
+    // { id: 2, name: "API Reference", href: "/docs" },
     { id: 3, name: "Blog", href: "/blog" },
   ],
   support: [
