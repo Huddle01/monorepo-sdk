@@ -19,6 +19,7 @@ import HomepageIconsMob from "../assets/HomepageIconsMob";
 
 import { useWindowSize } from "usehooks-ts";
 import { Footer } from "../Footer";
+import CustomHead from "../CustomHead";
 
 export default function Home() {
   const onClick = () => {
@@ -33,11 +34,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Huddle01</title>
-        <meta
-          name="og:description"
-          content="We have done the heavy lifting so you can focus on building the best live audio & video experiences within few lines of code. "
-        />
+        <CustomHead />
       </Head>
       <div className="hidden xl:block">
         <div className="absolute top-[188px] left-[207px] h-12 w-12 ">

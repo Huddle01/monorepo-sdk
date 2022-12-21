@@ -9,7 +9,7 @@ const theme = {
     link: "https://github.com/Huddle-01/huddle01-docs",
   },
   docsRepositoryBase: "https://github.com/Huddle-01/huddle01-docs/",
-  titleSuffix: " | Huddle01",
+  titleSuffix: "",
   unstable_flexsearch: true,
   unstable_staticImage: true,
   toc: {

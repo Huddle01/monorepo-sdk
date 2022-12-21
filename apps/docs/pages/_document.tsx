@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import type { DocumentInitialProps, DocumentContext } from "next/document";
+import CustomHead from "../components/CustomHead";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -14,6 +15,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <CustomHead />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
