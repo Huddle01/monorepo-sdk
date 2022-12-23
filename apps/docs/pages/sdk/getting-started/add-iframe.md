@@ -36,7 +36,7 @@ Create a config object as follows:
 ```jsx
 // JavaScript
 const iframeConfig = {
-  roomUrl: "http://localhost:3000/123",
+  roomUrl: "https://iframe.huddle01.com/123",
   height: "600px",
   width: "80%",
   noBorder: false, // false by default
@@ -49,7 +49,7 @@ const iframeConfig = {
 import { HuddleIframe, IframeConfig } from "@huddle01/huddle01-iframe";
 
 const iframeConfig: IframeConfig = {
-  roomUrl: "http://localhost:3000/123",
+  roomUrl: "https://iframe.huddle01.com/123",
   height: "600px",
   width: "80%",
   noBorder: false, // false by default

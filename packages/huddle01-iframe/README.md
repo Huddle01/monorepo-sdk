@@ -40,7 +40,7 @@ Create a config object as follows:
 ```jsx
 // JavaScript
 const iframeConfig = {
-  roomUrl: 'http://localhost:3000/123',
+  roomUrl: 'https://iframe.huddle01.com/123',
   height: '600px',
   width: '80%',
   noBorder: false, // false by default
@@ -53,7 +53,7 @@ const iframeConfig = {
 import { HuddleIframe, IframeConfig } from '@huddle01/huddle01-iframe';
 
 const iframeConfig: IframeConfig = {
-  roomUrl: 'http://localhost:3000/123',
+  roomUrl: 'https://iframe.huddle01.com/123',
   height: '600px',
   width: '80%',
   noBorder: false, // false by default
@@ -145,14 +145,14 @@ There are some additional meeting events that you can listen to as well:
 // JavaScript
 import { huddleIframeApp, HuddleAppEvent } from '@huddle01/huddle01-iframe';
 
-huddleIframeApp.on('peer-join', data => console.log({ data }));
+huddleIframeApp.on('peer-join', (data) => console.log({ data }));
 ```
 
 ```tsx
 // TypeScript
 import { huddleIframeApp, HuddleAppEvent } from '@huddle01/huddle01-iframe';
 
-huddleIframeApp.on(HuddleAppEvent.PEER_JOIN, data => console.log({ data }));
+huddleIframeApp.on(HuddleAppEvent.PEER_JOIN, (data) => console.log({ data }));
 ```
 
 ---
