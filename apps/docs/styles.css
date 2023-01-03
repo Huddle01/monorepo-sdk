@@ -56,11 +56,10 @@ body {
   @apply hidden;
 }
 
-
 .blobBack {
   background-image: url(./public/images/blobMob.png);
   background-size: contain;
-  background-position:bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
 
   /* background-color: red; */
@@ -70,7 +69,7 @@ body {
   .blobBack {
     background-image: url(./public/images/blobWeb.png);
     background-size: contain;
-    background-position:bottom;
+    background-position: bottom;
     background-repeat: no-repeat;
   }
 }
@@ -81,6 +80,11 @@ body {
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Code to disable onClick on Logo */
+a:has(> #huddle01-logo) {
+  pointer-events: none;
 }

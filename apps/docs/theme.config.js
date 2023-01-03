@@ -21,10 +21,10 @@ const theme = {
   },
   logo: function LogoActual() {
     return (
-      <>
+      <div id="huddle01-logo">
         <Huddle01 height={26} />
         <span className="sr-only">Huddle01</span>
-      </>
+      </div>
     );
   },
   head: function () {
