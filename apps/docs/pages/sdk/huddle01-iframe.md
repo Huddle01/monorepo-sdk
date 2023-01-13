@@ -8,7 +8,50 @@ Huddle01 IFrame lets you embed Huddle01's Web App in your website with a few lin
 
 > **_NOTE:_** Request for access to the Iframe package on Huddle01's [discord](https://discord.com/invite/EYqfS32jYc) or reach out to the team.
 
-## Quick Start
+## Vanilla
+
+> **_NOTE:_** `src` can be a subdomain of your own instead of `iframe.huddle01.com`
+
+### Markup
+
+```html
+  <iframe
+      id="huddle01-iframe"
+      src="https://iframe.huddle01.com/some-room"
+      name="myiFrame"
+      scrolling="no"
+      height='90%'
+      width='90%'
+      allowFullScreen
+      allow="camera; microphone; clipboard-read; clipboard-write; display-capture"
+    ></iframe>
+```
+
+### Methods
+
+```jsx
+const huddleIframe = document.getElementById('huddle01-iframe');
+huddleIframe.contentWindow.postMessage({ type: 'huddle01-iframe', methodType, methodData },'*');
+```
+
+**Methods:**
+
+- **`muteMic()` ✅**
+- **`unmuteMic()` ✅**
+- **`enableShare()` ✅**
+- **`disableShare()` ✅**
+- **`startRecording()` ✅**
+- **`stopRecording()` ✅**
+- **`sendReaction(emogi)` ✅**
+  **[allowed emogis: 😂, 😢, 😦, 😍, 🤔, 👀, 🙌, 👍, 👎, 🔥, 🍻, 🚀, 🎉, ❤️, 💯]**
+- **`toggleHandRaise()` ✅**
+- **`connectWallet(address)` ✅**
+
+---
+
+## React
+
+### Quick Start
 
 You must have the latest version of `Nodejs` installed on your machine. You can download the latest version of `Nodejs` from [here](https://nodejs.org/en/download/).
 
@@ -22,7 +65,7 @@ npm i @huddle01/huddle01-iframe
 yarn add @huddle01/huddle01-iframe
 ```
 
-## **Huddle App Setup**
+### **Huddle App Setup**
 
 _import_ `<HuddleIframe />` from the **_npm_** package
 
@@ -63,7 +106,7 @@ Pass the _`configObj`_ as a parameter to the `<HuddleIframeApp />` component
 
 ---
 
-## Instance Methods
+### Instance Methods
 
 **Usage:**
 
@@ -78,7 +121,7 @@ huddleIframeApp.methods.methodName();
 huddleIframeApp.methods.muteMic();
 ```
 
-**Action Methods:**
+**Methods:**
 
 - **`muteMic()` ✅**
 - **`unmuteMic()` ✅**
@@ -92,13 +135,6 @@ huddleIframeApp.methods.muteMic();
 - **`connectWallet(address)` ✅**
 
 ---
-
-**Info Methods**
-
-```jsx
-// Javascript | Typescript
-const participants = huddleIframeApp.infoMethods.getParticipants();
-```
 
 ```jsx
 // example participant
