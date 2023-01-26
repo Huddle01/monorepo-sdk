@@ -12,9 +12,6 @@ const FooterGrid: React.FC = () => {
 
   // Func
   const handleLink = (data: [string, TNavData], link: string) => {
-    if (data[0] === "solutions") {
-      return router.push(link);
-    }
     return window.open(link);
   };
   return (
