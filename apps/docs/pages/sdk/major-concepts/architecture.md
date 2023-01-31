@@ -22,7 +22,7 @@ The Huddle01 Mediaserver is our in-house SFU implementation written in C++ bridg
 
 ## **Huddle01 Recorder / Livestreamer**
 
-A containerised microservice is responsible for recording and livestreaming meetings , written in Golang using Gstreamer.
+A containerised microservice is responsible for recording and livestreaming meetings, written in Golang using Gstreamer.
 
 - It handles streaming to streaming services such as Youtube, Twitch, etc
 - It handles recording to local storage and cloud storage such as AWS S3, IPFS and Filecoin
