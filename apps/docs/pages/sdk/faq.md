@@ -23,4 +23,4 @@
 ---
 
 💡 For any further help reach out to us on
-[Discord](https://discord.com/invite/EYqfS32jYc)
+[Discord](https://discord.com/invite/MgR5wqd3J7)
