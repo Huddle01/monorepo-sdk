@@ -187,7 +187,7 @@ await huddleClient.changeMic(micList[0]);
 `muteMic()` to mute the microphone of the user.
 
 > Note : This will stop the audio stream from the user's microphone and mute the user.
-> Using `muteMic()` is preffered over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter stops the audio stream from the user's microphone.
+> Using `muteMic()` is preferred over `disableMic()` as it will not stop the audio stream from the user's microphone. <br/>`muteMic()` is generally faster and more efficient than `disableMic()` as the latter stops the audio stream from the user's microphone.
 > Use `muteMic()` and `unmuteMic()` when you want a quick mute/unmute functionality.
 
 <br />
@@ -343,8 +343,8 @@ huddleClient.disallowAllLobbyPeerFromJoiningRoom();
 
 ## <font color="yellow">async</font> `startRecording()`
 
-We have abstracted out the recording process needed into our own micro service, as its our own service you cannot use the feature on localhost.
-When you invoke this function we initate our service which spins up a bot to go to your link and record that website. After you stop the recording you can find the link inside the recording store states.<br />
+We have abstracted out the recording process needed into our own micro service, as it's our own service you cannot use the feature on localhost.
+When you invoke this function we initiate our service which spins up a bot to go to your link and record that website. After you stop the recording you can find the link inside the recording store states.<br />
 
 Check out [Recording States](/sdk)
 
@@ -390,13 +390,13 @@ huddleClient.stopRecording({
 
 ## <font color="yellow">async</font> `startLiveStreaming()`
 
-The ability to livestream a particular meeting is abstracted in the SDK, We can be livestream on `Youtube`, `Livepeer` & `Twitch`. Right now you cannot mutistream
+The ability to livestream a particular meeting is abstracted in the SDK, we can livestream on `Youtube`, `Livepeer` & `Twitch`. Right now you cannot multistream
 
 Check out [Recording States](/sdk)
 
 | Param     | Type                           | Required                                  |
 | --------- | ------------------------------ | ----------------------------------------- |
-| platform  | `yotube`, `livepeer`, `twitch` | <font color="red">`required`</font>       |
+| platform  | `youtube`, `livepeer`, `twitch` | <font color="red">`required`</font>       |
 | streamObj | `TLiveStreamObject`            | <font color="lightblue">`optional`</font> |
 | sourceUrl | string                         | <font color="lightblue">`optional`</font> |
 
