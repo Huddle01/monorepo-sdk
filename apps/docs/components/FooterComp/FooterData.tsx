@@ -19,7 +19,7 @@ export const NavigationData: TNavigationType = {
     {
       id: 4,
       name: "GitHub",
-      href: "https://github.com/Huddle-01/",
+      href: "https://github.com/Huddle01/",
     },
     {
       id: 5,

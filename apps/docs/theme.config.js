@@ -4,11 +4,11 @@ import { Footer } from "./components/Footer";
 import Huddle01 from "./components/logos/Huddle01";
 
 const theme = {
-  github: "https://github.com/Huddle-01/huddle01-docs",
+  github: "https://github.com/Huddle01/huddle01-docs",
   project: {
-    link: "https://github.com/Huddle-01/huddle01-docs",
+    link: "https://github.com/Huddle01/huddle01-docs",
   },
-  docsRepositoryBase: "https://github.com/Huddle-01/huddle01-docs/",
+  docsRepositoryBase: "https://github.com/Huddle01/huddle01-docs/",
   titleSuffix: "",
   unstable_flexsearch: true,
   unstable_staticImage: true,

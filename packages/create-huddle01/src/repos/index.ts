@@ -6,6 +6,6 @@ export const downloadRepo = async (
   isTs: boolean
 ) =>
   await clone(
-    `https://github.com/Huddle-01/${repoName}${isTs ? "-ts" : ""}`,
+    `https://github.com/Huddle01/${repoName}${isTs ? "-ts" : ""}`,
     name
   );
