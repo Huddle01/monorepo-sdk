@@ -32,6 +32,6 @@ MDN Docs: [MediaStream](https://developer.mozilla.org/en-US/docs/Web/API/MediaSt
 
 ## MediaStreamTrack
 
-The `MediaStreamTrack` interface represents a single media track within a `MediaStream`, these are audio or video tracks in our case .
+The `MediaStreamTrack` interface represents a single media track within a `MediaStream`, these are audio or video tracks in our case.
 
 MDN Docs: [MediaStreamTrack](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack)

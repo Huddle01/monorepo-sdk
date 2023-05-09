@@ -29,4 +29,4 @@ Our SDK provides you with the following 3 options:
 
 Check out the Frequently Asked Questions [here](/sdk/faq)
 
-Feel free to reach out to us on [Discord](https://discord.com/invite/EYqfS32jYc) if you have any further questions!
+Feel free to reach out to us on [Discord](https://discord.com/invite/MgR5wqd3J7) if you have any further questions!
